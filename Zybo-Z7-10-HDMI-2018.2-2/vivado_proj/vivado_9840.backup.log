@@ -1,0 +1,281 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Mar 21 16:51:57 2021
+# Process ID: 9840
+# Current directory: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22964 C:\Users\Thomas\Desktop\Zybo-Z7-10-HDMI-2018.2-2\vivado_proj\zybo-z7-10-hdmi.xpr
+# Log file: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/vivado.log
+# Journal file: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/arthur/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-20736-WK142/PrjAr/_X_' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.ipdefs/vivado-library_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_axi_vdma_0_0
+design_1_axi_gpio_video_0
+design_1_axi_interconnect_gp0_0
+design_1_axis_subset_converter_in_0
+design_1_axi_interconnect_hp0_0
+design_1_axis_subset_converter_out_0
+design_1_dvi2rgb_0_0
+design_1_proc_sys_reset_0_0
+design_1_proc_sys_reset_fclk0_0
+design_1_proc_sys_reset_fclk1_0
+design_1_subset_converter_reset_0
+design_1_xbar_1
+design_1_v_axi4s_vid_out_0_0
+design_1_v_tc_in_0
+design_1_v_tc_out_0
+design_1_v_vid_in_axi4s_0_0
+design_1_xbar_0
+design_1_m00_regslice_0
+design_1_auto_pc_1
+design_1_s01_regslice_0
+design_1_s00_regslice_0
+design_1_auto_pc_0
+
+open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:14 . Memory (MB): peak = 944.230 ; gain = 283.180
+report_ip_status -name ip_status 
+update_compile_order -fileset sources_1
+upgrade_ip [get_ips  {design_1_axi_gpio_video_0 design_1_v_axi4s_vid_out_0_0 design_1_proc_sys_reset_0_0 design_1_axi_interconnect_hp0_0 design_1_axi_interconnect_gp0_0 design_1_axis_subset_converter_out_0 design_1_v_tc_out_0 design_1_v_vid_in_axi4s_0_0 design_1_axis_subset_converter_in_0 design_1_subset_converter_reset_0 design_1_axi_vdma_0_0 design_1_proc_sys_reset_fclk0_0 design_1_v_tc_in_0 design_1_dvi2rgb_0_0 design_1_proc_sys_reset_fclk1_0}] -log ip_upgrade.log
+Adding cell -- digilentinc.com:ip:axi_dynclk:1.0 - axi_dynclk_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_video
+Adding cell -- xilinx.com:ip:axi_vdma:6.3 - axi_vdma_0
+Adding cell -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_in
+Adding cell -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_out
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_fclk0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_fclk1
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- digilentinc.com:ip:rgb2dvi:1.4 - rgb2dvi_1
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - subset_converter_reset
+Adding cell -- xilinx.com:ip:v_axi4s_vid_out:4.0 - v_axi4s_vid_out_0
+Adding cell -- xilinx.com:ip:v_tc:6.1 - v_tc_in
+Adding cell -- xilinx.com:ip:v_tc:6.1 - v_tc_out
+Adding cell -- xilinx.com:ip:v_vid_in_axi4s:4.0 - v_vid_in_axi4s_0
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding cell -- digilentinc.com:ip:dvi2rgb:2.0 - dvi2rgb_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_dynclk_0/LOCKED_O(undef) and /rgb2dvi_1/aRst_n(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /dvi2rgb_0/pLocked(undef) and /proc_sys_reset_0/aux_reset_in(rst)
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - m00_regslice
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - s01_regslice
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - s00_regslice
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <design_1> from BD file <C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd>
+Upgrading 'C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_axi_gpio_video_0 (AXI GPIO 2.0) from revision 19 to revision 20
+INFO: [IP_Flow 19-3422] Upgraded design_1_axi_interconnect_gp0_0 (AXI Interconnect 2.1) from revision 18 to revision 19
+INFO: [IP_Flow 19-3422] Upgraded design_1_axi_interconnect_hp0_0 (AXI Interconnect 2.1) from revision 18 to revision 19
+INFO: [IP_Flow 19-3422] Upgraded design_1_axi_vdma_0_0 (AXI Video Direct Memory Access 6.3) from revision 5 to revision 6
+INFO: [IP_Flow 19-3422] Upgraded design_1_axis_subset_converter_in_0 (AXI4-Stream Subset Converter 1.1) from revision 17 to revision 18
+INFO: [IP_Flow 19-3422] Upgraded design_1_axis_subset_converter_out_0 (AXI4-Stream Subset Converter 1.1) from revision 17 to revision 18
+WARNING: [IP_Flow 19-3432] UI File c:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.ipdefs/vivado-library_0/ip/dvi2rgb/xgui/dvi2rgb_v2_0.tcl does not exist
+WARNING: [IP_Flow 19-2991] No XGUI Files found 
+INFO: [IP_Flow 19-1972] Upgraded design_1_dvi2rgb_0_0 from DVI to RGB Video Decoder (Sink) 2.0 to DVI to RGB Video Decoder (Sink) 2.0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /proc_sys_reset_0/aux_reset_in(rst) and /dvi2rgb_0_upgraded_ipi/pLocked(undef)
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [IP_Flow 19-3422] Upgraded design_1_proc_sys_reset_0_0 (Processor System Reset 5.0) from revision 12 to revision 13
+WARNING: [BD 41-1731] Type mismatch between connected pins: /dvi2rgb_0/pLocked(undef) and /proc_sys_reset_0_upgraded_ipi/aux_reset_in(rst)
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [IP_Flow 19-3422] Upgraded design_1_proc_sys_reset_fclk0_0 (Processor System Reset 5.0) from revision 12 to revision 13
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [IP_Flow 19-3422] Upgraded design_1_proc_sys_reset_fclk1_0 (Processor System Reset 5.0) from revision 12 to revision 13
+INFO: [IP_Flow 19-1972] Upgraded design_1_subset_converter_reset_0 from Constant 1.1 to Constant 1.1
+INFO: [IP_Flow 19-3422] Upgraded design_1_v_axi4s_vid_out_0_0 (AXI4-Stream to Video Out 4.0) from revision 9 to revision 10
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'fifo_read_level'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_v_axi4s_vid_out_0_0'. These changes may impact your design.
+INFO: [IP_Flow 19-3422] Upgraded design_1_v_tc_in_0 (Video Timing Controller 6.1) from revision 12 to revision 13
+INFO: [IP_Flow 19-3422] Upgraded design_1_v_tc_out_0 (Video Timing Controller 6.1) from revision 12 to revision 13
+INFO: [IP_Flow 19-3422] Upgraded design_1_v_vid_in_axi4s_0_0 (Video In to AXI4-Stream 4.0) from revision 8 to revision 9
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'design_1_v_axi4s_vid_out_0_0' has identified issues that may require user intervention. Please review the upgrade log 'c:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+Wrote  : <C:\Users\Thomas\Desktop\Zybo-Z7-10-HDMI-2018.2-2\vivado_proj\zybo-z7-10-hdmi.srcs\sources_1\bd\design_1\design_1.bd> 
+INFO: [BD 41-2124] The block design file <C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd> has changed from an XML format to a JSON format. All flows are expected to work as in prior versions of Vivado. Please contact your Xilinx Support representative, in case of any issues.
+Wrote  : <C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/ip_upgrade.log'.
+upgrade_ip: Time (s): cpu = 00:01:00 ; elapsed = 00:00:40 . Memory (MB): peak = 1975.371 ; gain = 87.211
+export_ip_user_files -of_objects [get_ips {design_1_axi_gpio_video_0 design_1_v_axi4s_vid_out_0_0 design_1_proc_sys_reset_0_0 design_1_axi_interconnect_hp0_0 design_1_axi_interconnect_gp0_0 design_1_axis_subset_converter_out_0 design_1_v_tc_out_0 design_1_v_vid_in_axi4s_0_0 design_1_axis_subset_converter_in_0 design_1_subset_converter_reset_0 design_1_axi_vdma_0_0 design_1_proc_sys_reset_fclk0_0 design_1_v_tc_in_0 design_1_dvi2rgb_0_0 design_1_proc_sys_reset_fclk1_0}] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-927] Following properties on pin /axi_dynclk_0/REF_CLK_I have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /axi_dynclk_0/PXL_CLK_O have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_axi_dynclk_0_0_PXL_CLK_O 
+WARNING: [BD 41-927] Following properties on pin /axi_dynclk_0/PXL_CLK_5X_O have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_axi_dynclk_0_0_PXL_CLK_5X_O 
+WARNING: [BD 41-927] Following properties on pin /axi_dynclk_0/s00_axi_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+WARNING: [BD 41-927] Following properties on pin /rgb2dvi_1/PixelClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_axi_dynclk_0_0_PXL_CLK_O 
+WARNING: [BD 41-927] Following properties on pin /rgb2dvi_1/SerialClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_axi_dynclk_0_0_PXL_CLK_5X_O 
+WARNING: [BD 41-927] Following properties on pin /dvi2rgb_0/RefClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK2 
+WARNING: [BD 41-927] Following properties on pin /dvi2rgb_0/PixelClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_dvi2rgb_0_0_PixelClk 
+Wrote  : <C:\Users\Thomas\Desktop\Zybo-Z7-10-HDMI-2018.2-2\vivado_proj\zybo-z7-10-hdmi.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_hp0/m00_couplers/m00_regslice/m_axi_rid'(1) to net 'm00_regslice_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_hp0/m00_couplers/m00_regslice/m_axi_bid'(1) to net 'm00_regslice_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to net 'axi_interconnect_0_M00_AXI_WID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to net 'axi_interconnect_0_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to net 'axi_interconnect_0_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_hp0/m00_couplers/m00_regslice/m_axi_rid'(1) to net 'm00_regslice_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_hp0/m00_couplers/m00_regslice/m_axi_bid'(1) to net 'm00_regslice_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to net 'axi_interconnect_0_M00_AXI_WID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to net 'axi_interconnect_0_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to net 'axi_interconnect_0_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dynclk_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_video .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_vdma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_subset_converter_in .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_subset_converter_out .
+CRITICAL WARNING: [IP_Flow 19-4965] IP ila_refclk was packaged with board value 'digilentinc.com:nexys_video:part0:1.1'. Current project's board value is 'digilentinc.com:zybo-z7-10:part0:1.0'. Please update the project settings to match the packaged IP.
+INFO: [IP_Flow 19-3422] Upgraded ila_refclk (ILA (Integrated Logic Analyzer) 6.2) from revision 7 to revision 8
+CRITICAL WARNING: [IP_Flow 19-4965] IP ila_pixclk was packaged with board value 'digilentinc.com:nexys_video:part0:1.1'. Current project's board value is 'digilentinc.com:zybo-z7-10:part0:1.0'. Please update the project settings to match the packaged IP.
+INFO: [IP_Flow 19-3422] Upgraded ila_pixclk (ILA (Integrated Logic Analyzer) 6.2) from revision 7 to revision 8
+INFO: [BD 41-1029] Generation completed for the IP Integrator block dvi2rgb_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_fclk0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_fclk1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block subset_converter_reset .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_axi4s_vid_out_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_tc_in .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_tc_out .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_vid_in_axi4s_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_gp0/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_hp0/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_gp0/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_hp0/s00_couplers/s00_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_hp0/s01_couplers/s01_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_hp0/m00_couplers/m00_regslice .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_hp0/m00_couplers/auto_pc .
+Exporting to file C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:03:40 ; elapsed = 00:02:11 . Memory (MB): peak = 1975.371 ; gain = 0.000
+catch { config_ip_cache -export [get_ips -all design_1_axi_dynclk_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_gpio_video_0] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_vdma_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_axis_subset_converter_in_0] }
+catch { config_ip_cache -export [get_ips -all design_1_axis_subset_converter_out_0] }
+catch { config_ip_cache -export [get_ips -all design_1_dvi2rgb_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_proc_sys_reset_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_proc_sys_reset_fclk0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_proc_sys_reset_fclk1_0] }
+catch { config_ip_cache -export [get_ips -all design_1_processing_system7_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rgb2dvi_1_0] }
+catch { config_ip_cache -export [get_ips -all design_1_v_axi4s_vid_out_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_v_tc_in_0] }
+catch { config_ip_cache -export [get_ips -all design_1_v_tc_out_0] }
+catch { config_ip_cache -export [get_ips -all design_1_v_vid_in_axi4s_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_xbar_0] }
+catch { config_ip_cache -export [get_ips -all design_1_xbar_1] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all design_1_s00_regslice_0] }
+catch { config_ip_cache -export [get_ips -all design_1_s01_regslice_0] }
+catch { config_ip_cache -export [get_ips -all design_1_m00_regslice_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_1] }
+export_ip_user_files -of_objects [get_files C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd]
+create_ip_run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1975.371 ; gain = 0.000
+launch_runs -jobs 8 {design_1_axi_dynclk_0_0_synth_1 design_1_processing_system7_0_0_synth_1 design_1_rgb2dvi_1_0_synth_1 design_1_axi_gpio_video_0_synth_1 design_1_axi_vdma_0_0_synth_1 design_1_axis_subset_converter_in_0_synth_1 design_1_axis_subset_converter_out_0_synth_1 design_1_dvi2rgb_0_0_synth_1 design_1_proc_sys_reset_0_0_synth_1 design_1_proc_sys_reset_fclk0_0_synth_1 design_1_proc_sys_reset_fclk1_0_synth_1 design_1_v_axi4s_vid_out_0_0_synth_1 design_1_v_tc_in_0_synth_1 design_1_v_tc_out_0_synth_1 design_1_v_vid_in_axi4s_0_0_synth_1 design_1_xbar_0_synth_1 design_1_xbar_1_synth_1 design_1_auto_pc_0_synth_1 design_1_s00_regslice_0_synth_1 design_1_s01_regslice_0_synth_1 design_1_m00_regslice_0_synth_1 design_1_auto_pc_1_synth_1}
+[Sun Mar 21 16:57:05 2021] Launched design_1_axi_dynclk_0_0_synth_1, design_1_processing_system7_0_0_synth_1, design_1_rgb2dvi_1_0_synth_1, design_1_axi_gpio_video_0_synth_1, design_1_axi_vdma_0_0_synth_1, design_1_axis_subset_converter_in_0_synth_1, design_1_axis_subset_converter_out_0_synth_1, design_1_dvi2rgb_0_0_synth_1, design_1_proc_sys_reset_0_0_synth_1, design_1_proc_sys_reset_fclk0_0_synth_1, design_1_proc_sys_reset_fclk1_0_synth_1, design_1_v_axi4s_vid_out_0_0_synth_1, design_1_v_tc_in_0_synth_1, design_1_v_tc_out_0_synth_1, design_1_v_vid_in_axi4s_0_0_synth_1, design_1_xbar_0_synth_1, design_1_xbar_1_synth_1, design_1_auto_pc_0_synth_1, design_1_s00_regslice_0_synth_1, design_1_s01_regslice_0_synth_1, design_1_m00_regslice_0_synth_1, design_1_auto_pc_1_synth_1...
+Run output will be captured here:
+design_1_axi_dynclk_0_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_axi_dynclk_0_0_synth_1/runme.log
+design_1_processing_system7_0_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_rgb2dvi_1_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_rgb2dvi_1_0_synth_1/runme.log
+design_1_axi_gpio_video_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_axi_gpio_video_0_synth_1/runme.log
+design_1_axi_vdma_0_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_axi_vdma_0_0_synth_1/runme.log
+design_1_axis_subset_converter_in_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_axis_subset_converter_in_0_synth_1/runme.log
+design_1_axis_subset_converter_out_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_axis_subset_converter_out_0_synth_1/runme.log
+design_1_dvi2rgb_0_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_dvi2rgb_0_0_synth_1/runme.log
+design_1_proc_sys_reset_0_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_proc_sys_reset_0_0_synth_1/runme.log
+design_1_proc_sys_reset_fclk0_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_proc_sys_reset_fclk0_0_synth_1/runme.log
+design_1_proc_sys_reset_fclk1_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_proc_sys_reset_fclk1_0_synth_1/runme.log
+design_1_v_axi4s_vid_out_0_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_v_axi4s_vid_out_0_0_synth_1/runme.log
+design_1_v_tc_in_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_v_tc_in_0_synth_1/runme.log
+design_1_v_tc_out_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_v_tc_out_0_synth_1/runme.log
+design_1_v_vid_in_axi4s_0_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_v_vid_in_axi4s_0_0_synth_1/runme.log
+design_1_xbar_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_xbar_0_synth_1/runme.log
+design_1_xbar_1_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_xbar_1_synth_1/runme.log
+design_1_auto_pc_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_auto_pc_0_synth_1/runme.log
+design_1_s00_regslice_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_s00_regslice_0_synth_1/runme.log
+design_1_s01_regslice_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_s01_regslice_0_synth_1/runme.log
+design_1_m00_regslice_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_m00_regslice_0_synth_1/runme.log
+design_1_auto_pc_1_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_auto_pc_1_synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1975.371 ; gain = 0.000
+export_simulation -of_objects [get_files C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.ip_user_files -ipstatic_source_dir C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.cache/compile_simlib/modelsim} {questa=C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.cache/compile_simlib/questa} {riviera=C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.cache/compile_simlib/riviera} {activehdl=C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Mar 21 16:59:14 2021] Launched design_1_axi_vdma_0_0_synth_1, design_1_dvi2rgb_0_0_synth_1, design_1_v_tc_in_0_synth_1, design_1_v_tc_out_0_synth_1, design_1_v_vid_in_axi4s_0_0_synth_1, design_1_xbar_0_synth_1, design_1_xbar_1_synth_1, design_1_auto_pc_0_synth_1, design_1_s00_regslice_0_synth_1, design_1_s01_regslice_0_synth_1, design_1_m00_regslice_0_synth_1, design_1_auto_pc_1_synth_1, synth_1...
+Run output will be captured here:
+design_1_axi_vdma_0_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_axi_vdma_0_0_synth_1/runme.log
+design_1_dvi2rgb_0_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_dvi2rgb_0_0_synth_1/runme.log
+design_1_v_tc_in_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_v_tc_in_0_synth_1/runme.log
+design_1_v_tc_out_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_v_tc_out_0_synth_1/runme.log
+design_1_v_vid_in_axi4s_0_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_v_vid_in_axi4s_0_0_synth_1/runme.log
+design_1_xbar_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_xbar_0_synth_1/runme.log
+design_1_xbar_1_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_xbar_1_synth_1/runme.log
+design_1_auto_pc_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_auto_pc_0_synth_1/runme.log
+design_1_s00_regslice_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_s00_regslice_0_synth_1/runme.log
+design_1_s01_regslice_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_s01_regslice_0_synth_1/runme.log
+design_1_m00_regslice_0_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_m00_regslice_0_synth_1/runme.log
+design_1_auto_pc_1_synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/design_1_auto_pc_1_synth_1/runme.log
+synth_1: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/synth_1/runme.log
+[Sun Mar 21 16:59:17 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2103.023 ; gain = 3.285
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Mar 21 17:08:23 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/impl_1/runme.log
+report_ip_status -name ip_status 
+file mkdir C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.sdk
+file copy -force C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/impl_1/design_1_wrapper.sysdef C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.sdk -hwspec C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.sdk -hwspec C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 21 17:30:00 2021...

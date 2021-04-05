@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Jan 23 16:23:31 2020
+# Process ID: 20736
+# Current directory: C:/Users/arthur/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent28400
+# Log file: C:/Users/arthur/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/arthur/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Github/zybo-z7-10-hdmi/proj/zybo-z7-10-hdmi.xpr
+update_compile_order -fileset sources_1
+open_bd_design {D:/Github/zybo-z7-10-hdmi/proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd}
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+archive_project D:/Github/zybo-z7-10-hdmi/zybo-z7-10-hdmi.xpr.zip -temp_dir C:/Users/arthur/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-20736-WK142 -force -include_local_ip_cache
