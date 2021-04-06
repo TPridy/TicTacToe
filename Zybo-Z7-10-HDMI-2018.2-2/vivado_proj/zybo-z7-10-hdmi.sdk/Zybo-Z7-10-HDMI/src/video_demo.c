@@ -85,15 +85,14 @@ const ivt_t ivt[] = {
 
 int main(void)
 {
-	DemoInitialize();
-
-	DemoRun();
+	Display_Initialize();
+	GameRun();
 
 	return 0;
 }
 
 
-void DemoInitialize()
+void Display_Initialize()
 {
 	int Status;
 	XAxiVdma_Config *vdmaConfig;
@@ -155,26 +154,16 @@ void DemoInitialize()
 	fnEnableInterrupts(&intc, &ivt[0], sizeof(ivt)/sizeof(ivt[0]));
 
 	/*
-	 * Initialize the Video Capture device
-	 */
-	Status = VideoInitialize(&videoCapt, &intc, &vdma, HDMI_IN_GPIO_ID, HDMI_IN_VTC_ID, HDMI_IN_VTC_IRPT_ID, pFrames, DEMO_STRIDE, DEMO_START_ON_DET);
-	if (Status != XST_SUCCESS)
-	{
-		xil_printf("Video Ctrl initialization failed during demo initialization%d\r\n", Status);
-		return;
-	}
-
-	/*
 	 * Set the Video Detect callback to trigger the menu to reset, displaying the new detected resolution
 	 */
 	VideoSetCallback(&videoCapt, DemoISR, &fRefresh);
 
-	DemoPrintTest(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, dispCtrl.stride, DEMO_PATTERN_1);
+	PrintPattern(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, dispCtrl.stride, TIC_TAC_TOE);
 
 	return;
 }
 
-void DemoRun()
+void GameRun()
 {
 	int nextFrame = 0;
 	char userInput = 0;
@@ -207,58 +196,11 @@ void DemoRun()
 
 		switch (userInput)
 		{
-		case '1':
+		case 's':
 			DemoChangeRes();
 			break;
-		case '2':
-			nextFrame = dispCtrl.curFrame + 1;
-			if (nextFrame >= DISPLAY_NUM_FRAMES)
-			{
-				nextFrame = 0;
-			}
-			DisplayChangeFrame(&dispCtrl, nextFrame);
-			break;
-		case '3':
-			DemoPrintTest(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, DEMO_PATTERN_0);
-			break;
-		case '4':
-			DemoPrintTest(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, DEMO_PATTERN_1);
-			break;
-		case '5':
-			if (videoCapt.state == VIDEO_STREAMING)
-				VideoStop(&videoCapt);
-			else
-				VideoStart(&videoCapt);
-			break;
-		case '6':
-			nextFrame = videoCapt.curFrame + 1;
-			if (nextFrame >= DISPLAY_NUM_FRAMES)
-			{
-				nextFrame = 0;
-			}
-			VideoChangeFrame(&videoCapt, nextFrame);
-			break;
-		case '7':
-			nextFrame = videoCapt.curFrame + 1;
-			if (nextFrame >= DISPLAY_NUM_FRAMES)
-			{
-				nextFrame = 0;
-			}
-			VideoStop(&videoCapt);
-			DemoInvertFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, DEMO_STRIDE);
-			VideoStart(&videoCapt);
-			DisplayChangeFrame(&dispCtrl, nextFrame);
-			break;
-		case '8':
-			nextFrame = videoCapt.curFrame + 1;
-			if (nextFrame >= DISPLAY_NUM_FRAMES)
-			{
-				nextFrame = 0;
-			}
-			VideoStop(&videoCapt);
-			DemoScaleFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE);
-			VideoStart(&videoCapt);
-			DisplayChangeFrame(&dispCtrl, nextFrame);
+		case 'n':
+			PrintPattern(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, TIC_TAC_TOE);
 			break;
 		case 'q':
 			break;
@@ -278,24 +220,16 @@ void DemoPrintMenu()
 	xil_printf("\x1B[H"); //Set cursor to top left of terminal
 	xil_printf("\x1B[2J"); //Clear terminal
 	xil_printf("**************************************************\n\r");
-	xil_printf("*                ZYBO Video Demo                 *\n\r");
+	xil_printf("*                Tic Tac Toe Game                  *\n\r");
 	xil_printf("**************************************************\n\r");
 	xil_printf("*Display Resolution: %28s*\n\r", dispCtrl.vMode.label);
 	printf("*Display Pixel Clock Freq. (MHz): %15.3f*\n\r", dispCtrl.pxlFreq);
 	xil_printf("*Display Frame Index: %27d*\n\r", dispCtrl.curFrame);
-	if (videoCapt.state == VIDEO_DISCONNECTED) xil_printf("*Video Capture Resolution: %22s*\n\r", "!HDMI UNPLUGGED!");
-	else xil_printf("*Video Capture Resolution: %17dx%-4d*\n\r", videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo);
-	xil_printf("*Video Frame Index: %29d*\n\r", videoCapt.curFrame);
 	xil_printf("**************************************************\n\r");
 	xil_printf("\n\r");
 	xil_printf("1 - Change Display Resolution\n\r");
 	xil_printf("2 - Change Display Framebuffer Index\n\r");
-	xil_printf("3 - Print Blended Test Pattern to Display Framebuffer\n\r");
-	xil_printf("4 - Print Color Bar Test Pattern to Display Framebuffer\n\r");
-	xil_printf("5 - Start/Stop Video stream into Video Framebuffer\n\r");
-	xil_printf("6 - Change Video Framebuffer Index\n\r");
-	xil_printf("7 - Grab Video Frame and invert colors\n\r");
-	xil_printf("8 - Grab Video Frame and scale to Display resolution\n\r");
+	xil_printf("3 - Display TicTacToe Game\n\r");
 	xil_printf("q - Quit\n\r");
 	xil_printf("\n\r");
 	xil_printf("\n\r");
@@ -383,7 +317,7 @@ void DemoCRMenu()
 	xil_printf("\x1B[H"); //Set cursor to top left of terminal
 	xil_printf("\x1B[2J"); //Clear terminal
 	xil_printf("**************************************************\n\r");
-	xil_printf("*                ZYBO Video Demo                 *\n\r");
+	xil_printf("*               Tic Tac Toe Game                 *\n\r");
 	xil_printf("**************************************************\n\r");
 	xil_printf("*Current Resolution: %28s*\n\r", dispCtrl.vMode.label);
 	printf("*Pixel Clock Freq. (MHz): %23.3f*\n\r", dispCtrl.pxlFreq);
@@ -398,27 +332,6 @@ void DemoCRMenu()
 	xil_printf("q - Quit (don't change resolution)\n\r");
 	xil_printf("\n\r");
 	xil_printf("Select a new resolution:");
-}
-
-void DemoInvertFrame(u8 *srcFrame, u8 *destFrame, u32 width, u32 height, u32 stride)
-{
-	u32 xcoi, ycoi;
-	u32 lineStart = 0;
-	for(ycoi = 0; ycoi < height; ycoi++)
-	{
-		for(xcoi = 0; xcoi < (width * 3); xcoi+=3)
-		{
-			destFrame[xcoi + lineStart] = ~srcFrame[xcoi + lineStart];         //Red
-			destFrame[xcoi + lineStart + 1] = ~srcFrame[xcoi + lineStart + 1]; //Blue
-			destFrame[xcoi + lineStart + 2] = ~srcFrame[xcoi + lineStart + 2]; //Green
-		}
-		lineStart += stride;
-	}
-	/*
-	 * Flush the framebuffer memory range to ensure changes are written to the
-	 * actual memory, and therefore accessible by the VDMA.
-	 */
-	Xil_DCacheFlushRange((unsigned int) destFrame, DEMO_MAX_FRAME);
 }
 
 
@@ -494,7 +407,7 @@ void DemoScaleFrame(u8 *srcFrame, u8 *destFrame, u32 srcWidth, u32 srcHeight, u3
 	return;
 }
 
-void DemoPrintTest(u8 *frame, u32 width, u32 height, u32 stride, int pattern)
+void PrintPattern(u8 *frame, u32 width, u32 height, u32 stride, int pattern)
 {
 	u32 xcoi, ycoi;
 	u32 iPixelAddr;
@@ -508,147 +421,47 @@ void DemoPrintTest(u8 *frame, u32 width, u32 height, u32 stride, int pattern)
 
 	switch (pattern)
 	{
-	case DEMO_PATTERN_0:
-
-		xInt = width / 4; //Four intervals, each with width/4 pixels
-		xLeft = xInt * 3;
-		xMid = xInt * 2 * 3;
-		xRight = xInt * 3 * 3;
-		xInc = 256.0 / ((double) xInt); //256 color intensities are cycled through per interval (overflow must be caught when color=256.0)
-
-		yInt = height / 2; //Two intervals, each with width/2 lines
-		yMid = yInt;
-		yInc = 256.0 / ((double) yInt); //256 color intensities are cycled through per interval (overflow must be caught when color=256.0)
-
-		fBlue = 0.0;
-		fRed = 256.0;
-		for(xcoi = 0; xcoi < (width*3); xcoi+=3)
-		{
-			/*
-			 * Convert color intensities to integers < 256, and trim values >=256
-			 */
-			wRed = (fRed >= 256.0) ? 255 : ((u8) fRed);
-			wBlue = (fBlue >= 256.0) ? 255 : ((u8) fBlue);
-			iPixelAddr = xcoi;
-			fGreen = 0.0;
-			for(ycoi = 0; ycoi < height; ycoi++)
-			{
-
-				wGreen = (fGreen >= 256.0) ? 255 : ((u8) fGreen);
-				frame[iPixelAddr] = wRed;
-				frame[iPixelAddr + 1] = wBlue;
-				frame[iPixelAddr + 2] = wGreen;
-				if (ycoi < yMid)
-				{
-					fGreen += yInc;
-				}
-				else
-				{
-					fGreen -= yInc;
-				}
-
-				/*
-				 * This pattern is printed one vertical line at a time, so the address must be incremented
-				 * by the stride instead of just 1.
-				 */
-				iPixelAddr += stride;
-			}
-
-			if (xcoi < xLeft)
-			{
-				fBlue = 0.0;
-				fRed -= xInc;
-			}
-			else if (xcoi < xMid)
-			{
-				fBlue += xInc;
-				fRed += xInc;
-			}
-			else if (xcoi < xRight)
-			{
-				fBlue -= xInc;
-				fRed -= xInc;
-			}
-			else
-			{
-				fBlue += xInc;
-				fRed = 0;
-			}
-		}
-		/*
-		 * Flush the framebuffer memory range to ensure changes are written to the
-		 * actual memory, and therefore accessible by the VDMA.
-		 */
-		Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
-		break;
-	case DEMO_PATTERN_1:
-
-		xInt = width / 7; //Seven intervals, each with width/7 pixels
+	case TIC_TAC_TOE:
+		xInt = width / 3; //Three intervals, each with width/3 pixels
 		xInc = 256.0 / ((double) xInt); //256 color intensities per interval. Notice that overflow is handled for this pattern.
-
-		fColor = 0.0;
-		wCurrentInt = 1;
 		for(xcoi = 0; xcoi < (width*3); xcoi+=3)
 		{
-
-			/*
-			 * Just draw white in the last partial interval (when width is not divisible by 7)
-			 */
-			if (wCurrentInt > 7)
-			{
-				wRed = 255;
-				wBlue = 255;
-				wGreen = 255;
-			}
-			else
-			{
-				if (wCurrentInt & 0b001)
-					wRed = (u8) fColor;
-				else
-					wRed = 0;
-
-				if (wCurrentInt & 0b010)
-					wBlue = (u8) fColor;
-				else
-					wBlue = 0;
-
-				if (wCurrentInt & 0b100)
-					wGreen = (u8) fColor;
-				else
-					wGreen = 0;
-			}
-
 			iPixelAddr = xcoi;
 
 			for(ycoi = 0; ycoi < height; ycoi++)
 			{
-				frame[iPixelAddr] = wRed;
-				frame[iPixelAddr + 1] = wBlue;
-				frame[iPixelAddr + 2] = wGreen;
-				/*
-				 * This pattern is printed one vertical line at a time, so the address must be incremented
-				 * by the stride instead of just 1.
-				 */
-				iPixelAddr += stride;
-			}
+				if ((xcoi % width/3 == 0) || (xcoi % width/3 == 1)|| (xcoi % width/3 == 2)|| (xcoi % width/3 == 3)|| (xcoi % width/3 == 4))
+				{
+					frame[iPixelAddr] = 0;
+					frame[iPixelAddr + 1] = 0;
+					frame[iPixelAddr + 2] = 0;
+					iPixelAddr += stride;
+				}
+				else if ((ycoi % (height/3) == 0) || (ycoi % (height/3) == 1)|| (ycoi % (height/3) == 2)|| (ycoi % (height/3) == 3)|| (ycoi % (height/3) == 4))
+				{
+					frame[iPixelAddr] = 0;
+					frame[iPixelAddr + 1] = 0;
+					frame[iPixelAddr + 2] = 0;
+					iPixelAddr += stride;
+				}
+				else
+				{
+					frame[iPixelAddr] = 255;
+					frame[iPixelAddr + 1] = 255;
+					frame[iPixelAddr + 2] = 255;
+					iPixelAddr += stride;
+				}
 
-			fColor += xInc;
-			if (fColor >= 256.0)
-			{
-				fColor = 0.0;
-				wCurrentInt++;
 			}
 		}
-		/*
-		 * Flush the framebuffer memory range to ensure changes are written to the
-		 * actual memory, and therefore accessible by the VDMA.
-		 */
 		Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
 		break;
 	default :
 		xil_printf("Error: invalid pattern passed to DemoPrintTest");
 	}
 }
+
+
 
 void DemoISR(void *callBackRef, void *pVideo)
 {

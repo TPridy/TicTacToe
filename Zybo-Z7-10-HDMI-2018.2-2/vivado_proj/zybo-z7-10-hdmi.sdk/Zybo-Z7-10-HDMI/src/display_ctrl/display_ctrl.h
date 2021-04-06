@@ -66,9 +66,9 @@
 #define BIT_DISPLAY_GREEN 0
 
 /*
- * This driver currently supports 3 frames.
+ * This driver currently supports 2 frames.
  */
-#define DISPLAY_NUM_FRAMES 3
+#define DISPLAY_NUM_FRAMES 1
 
 /* ------------------------------------------------------------ */
 /*					General Type Declarations					*/

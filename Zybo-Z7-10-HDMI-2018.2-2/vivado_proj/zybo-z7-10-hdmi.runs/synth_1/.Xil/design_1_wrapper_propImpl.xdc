@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/constrs_1/imports/constraints/Zybo-Z7-Master.xdc rfile:../../../zybo-z7-10-hdmi.srcs/constrs_1/imports/constraints/Zybo-Z7-Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/constrs_1/imports/constraints/Zybo-Z7-Master.xdc rfile:../../../zybo-z7-10-hdmi.srcs/constrs_1/imports/constraints/Zybo-Z7-Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:70 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN W18   IOSTANDARD LVCMOS33 } [get_ports { hdmi_in_ddc_scl_io }]; #IO_L22P_T3_34 Sch=hdmi_rx_scl
 set_property src_info {type:XDC file:1 line:71 export:INPUT save:INPUT read:READ} [current_design]

@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Mar 28 13:42:23 2021
+# Process ID: 1612
+# Current directory: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1956 C:\Users\Thomas\Desktop\Zybo-Z7-10-HDMI-2018.2-2\vivado_proj\zybo-z7-10-hdmi.xpr
+# Log file: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/vivado.log
+# Journal file: C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.sdk -hwspec C:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.sdk/design_1_wrapper.hdf

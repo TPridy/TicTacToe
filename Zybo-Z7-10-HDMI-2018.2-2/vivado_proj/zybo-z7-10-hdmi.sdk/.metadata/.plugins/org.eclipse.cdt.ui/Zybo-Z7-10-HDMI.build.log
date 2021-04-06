@@ -1,8 +1,73 @@
-17:24:59 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+12:04:15 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Nothing to be done for 'main-build'.
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GameRun':
+../src/video_demo.c:168:6: warning: unused variable 'nextFrame' [-Wunused-variable]
+  int nextFrame = 0;
+      ^~~~~~~~~
+../src/video_demo.c: In function 'PrintPattern':
+../src/video_demo.c:419:15: warning: unused variable 'yInc' [-Wunused-variable]
+  double xInc, yInc;
+               ^~~~
+../src/video_demo.c:419:9: warning: variable 'xInc' set but not used [-Wunused-but-set-variable]
+  double xInc, yInc;
+         ^~~~
+../src/video_demo.c:418:12: warning: unused variable 'yInt' [-Wunused-variable]
+  u32 yMid, yInt;
+            ^~~~
+../src/video_demo.c:418:6: warning: unused variable 'yMid' [-Wunused-variable]
+  u32 yMid, yInt;
+      ^~~~
+../src/video_demo.c:417:19: warning: unused variable 'xRight' [-Wunused-variable]
+  u32 xLeft, xMid, xRight, xInt;
+                   ^~~~~~
+../src/video_demo.c:417:13: warning: unused variable 'xMid' [-Wunused-variable]
+  u32 xLeft, xMid, xRight, xInt;
+             ^~~~
+../src/video_demo.c:417:6: warning: unused variable 'xLeft' [-Wunused-variable]
+  u32 xLeft, xMid, xRight, xInt;
+      ^~~~~
+../src/video_demo.c:416:30: warning: unused variable 'fColor' [-Wunused-variable]
+  double fRed, fBlue, fGreen, fColor;
+                              ^~~~~~
+../src/video_demo.c:416:22: warning: unused variable 'fGreen' [-Wunused-variable]
+  double fRed, fBlue, fGreen, fColor;
+                      ^~~~~~
+../src/video_demo.c:416:15: warning: unused variable 'fBlue' [-Wunused-variable]
+  double fRed, fBlue, fGreen, fColor;
+               ^~~~~
+../src/video_demo.c:416:9: warning: unused variable 'fRed' [-Wunused-variable]
+  double fRed, fBlue, fGreen, fColor;
+         ^~~~
+../src/video_demo.c:415:6: warning: unused variable 'wCurrentInt' [-Wunused-variable]
+  u32 wCurrentInt;
+      ^~~~~~~~~~~
+../src/video_demo.c:414:18: warning: unused variable 'wGreen' [-Wunused-variable]
+  u8 wRed, wBlue, wGreen;
+                  ^~~~~~
+../src/video_demo.c:414:11: warning: unused variable 'wBlue' [-Wunused-variable]
+  u8 wRed, wBlue, wGreen;
+           ^~~~~
+../src/video_demo.c:414:5: warning: unused variable 'wRed' [-Wunused-variable]
+  u8 wRed, wBlue, wGreen;
+     ^~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 114548	   3520	6247360	6365428	 6120f4	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
 
-17:24:59 Build Finished (took 271ms)
+12:04:16 Build Finished (took 862ms)
 
