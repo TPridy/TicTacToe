@@ -45,10 +45,10 @@
 #define DYNCLK_BASEADDR 		XPAR_AXI_DYNCLK_0_BASEADDR
 #define VDMA_ID 				XPAR_AXIVDMA_0_DEVICE_ID
 #define HDMI_OUT_VTC_ID 		XPAR_V_TC_OUT_DEVICE_ID
-#define HDMI_IN_VTC_ID 			XPAR_V_TC_IN_DEVICE_ID
-#define HDMI_IN_GPIO_ID 		XPAR_AXI_GPIO_VIDEO_DEVICE_ID
-#define HDMI_IN_VTC_IRPT_ID 	XPAR_FABRIC_V_TC_IN_IRQ_INTR
-#define HDMI_IN_GPIO_IRPT_ID 	XPAR_FABRIC_AXI_GPIO_VIDEO_IP2INTC_IRPT_INTR
+//#define HDMI_IN_VTC_ID 			XPAR_V_TC_IN_DEVICE_ID
+//#define HDMI_IN_GPIO_ID 		XPAR_AXI_GPIO_VIDEO_DEVICE_ID
+//#define HDMI_IN_VTC_IRPT_ID 	XPAR_FABRIC_V_TC_IN_IRQ_INTR
+//#define HDMI_IN_GPIO_IRPT_ID 	XPAR_FABRIC_AXI_GPIO_VIDEO_IP2INTC_IRPT_INTR
 #define SCU_TIMER_ID 			XPAR_SCUTIMER_DEVICE_ID
 #define UART_BASEADDR 			XPAR_PS7_UART_1_BASEADDR
 
@@ -64,6 +64,9 @@ XAxiVdma vdma;
 VideoCapture videoCapt;
 INTC intc;
 char fRefresh; //flag used to trigger a refresh of the Menu on video detect
+char game_x = 1;
+char game_y = 1;
+char board[3][3];
 
 /*
  * Framebuffers for video data
@@ -74,10 +77,10 @@ u8 *pFrames[DISPLAY_NUM_FRAMES]; //array of pointers to the frame buffers
 /*
  * Interrupt vector table
  */
-const ivt_t ivt[] = {
-	videoGpioIvt(HDMI_IN_GPIO_IRPT_ID, &videoCapt),
-	videoVtcIvt(HDMI_IN_VTC_IRPT_ID, &(videoCapt.vtc))
-};
+//const ivt_t ivt[] = {
+//	videoGpioIvt(HDMI_IN_GPIO_IRPT_ID, &videoCapt),
+//	videoVtcIvt(HDMI_IN_VTC_IRPT_ID, &(videoCapt.vtc))
+//};
 
 /* ------------------------------------------------------------ */
 /*				Procedure Definitions							*/
@@ -86,6 +89,7 @@ const ivt_t ivt[] = {
 int main(void)
 {
 	Display_Initialize();
+	resetBoard();
 	GameRun();
 
 	return 0;
@@ -146,12 +150,12 @@ void Display_Initialize()
 	/*
 	 * Initialize the Interrupt controller and start it.
 	 */
-	Status = fnInitInterruptController(&intc);
+	/*Status = fnInitInterruptController(&intc);
 	if(Status != XST_SUCCESS) {
 		xil_printf("Error initializing interrupts");
 		return;
 	}
-	fnEnableInterrupts(&intc, &ivt[0], sizeof(ivt)/sizeof(ivt[0]));
+	fnEnableInterrupts(&intc, &ivt[0], sizeof(ivt)/sizeof(ivt[0]));*/
 
 	/*
 	 * Set the Video Detect callback to trigger the menu to reset, displaying the new detected resolution
@@ -159,13 +163,14 @@ void Display_Initialize()
 	VideoSetCallback(&videoCapt, DemoISR, &fRefresh);
 
 	PrintPattern(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, dispCtrl.stride, TIC_TAC_TOE);
+	PrintPattern(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, dispCtrl.stride, BOX);
 
 	return;
 }
 
 void GameRun()
 {
-	int nextFrame = 0;
+	//int nextFrame = 0;
 	char userInput = 0;
 
 	/* Flush UART FIFO */
@@ -196,11 +201,47 @@ void GameRun()
 
 		switch (userInput)
 		{
-		case 's':
+		case 'y':
 			DemoChangeRes();
 			break;
 		case 'n':
+			game_x = 1;
+			game_y = 1;
+			resetBoard();
 			PrintPattern(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, TIC_TAC_TOE);
+			PrintPattern(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, BOX);
+			break;
+		case 'w':
+			if ((game_y != 1))
+			{
+				game_y -= 1;
+				PrintPattern(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, TIC_TAC_TOE);
+				PrintPattern(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, BOX);
+			}
+			break;
+		case 'a':
+			if (game_x != 1)
+			{
+				game_x -= 1;
+				PrintPattern(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, TIC_TAC_TOE);
+				PrintPattern(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, BOX);
+			}
+			break;
+		case 's':
+			if ((game_y != 3))
+			{
+				game_y += 1;
+				PrintPattern(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, TIC_TAC_TOE);
+				PrintPattern(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, BOX);
+			}
+			break;
+		case 'd':
+			if (game_x != 3)
+			{
+				game_x += 1;
+				PrintPattern(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, TIC_TAC_TOE);
+				PrintPattern(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, BOX);
+			}
 			break;
 		case 'q':
 			break;
@@ -223,15 +264,23 @@ void DemoPrintMenu()
 	xil_printf("*                Tic Tac Toe Game                  *\n\r");
 	xil_printf("**************************************************\n\r");
 	xil_printf("*Display Resolution: %28s*\n\r", dispCtrl.vMode.label);
-	printf("*Display Pixel Clock Freq. (MHz): %15.3f*\n\r", dispCtrl.pxlFreq);
-	xil_printf("*Display Frame Index: %27d*\n\r", dispCtrl.curFrame);
+	//printf("*Display Pixel Clock Freq. (MHz): %15.3f*\n\r", dispCtrl.pxlFreq);
+	//xil_printf("*Display Frame Index: %27d*\n\r", dispCtrl.curFrame);
 	xil_printf("**************************************************\n\r");
 	xil_printf("\n\r");
-	xil_printf("1 - Change Display Resolution\n\r");
-	xil_printf("2 - Change Display Framebuffer Index\n\r");
-	xil_printf("3 - Display TicTacToe Game\n\r");
+	xil_printf("y - Change Display Resolution\n\r");
+	xil_printf("n - New TicTacToe Game\n\r");
+	xil_printf("w - Move up\n\r");
+	xil_printf("a - Move left\n\r");
+	xil_printf("s - Move down\n\r");
+	xil_printf("d - Move right\n\r");
+	xil_printf("\n\r");
 	xil_printf("q - Quit\n\r");
 	xil_printf("\n\r");
+	xil_printf("x = %d ",game_x);
+	xil_printf("y = %d ",game_y);
+	xil_printf("(height/3)*game_y = %d ",(dispCtrl.vMode.height/3)*game_y);
+	xil_printf("(height/3)*game_y-1 = %d ",(dispCtrl.vMode.height/3)*(game_y-1));
 	xil_printf("\n\r");
 	xil_printf("Enter a selection:");
 }
@@ -411,33 +460,24 @@ void PrintPattern(u8 *frame, u32 width, u32 height, u32 stride, int pattern)
 {
 	u32 xcoi, ycoi;
 	u32 iPixelAddr;
-	u8 wRed, wBlue, wGreen;
-	u32 wCurrentInt;
-	double fRed, fBlue, fGreen, fColor;
-	u32 xLeft, xMid, xRight, xInt;
-	u32 yMid, yInt;
-	double xInc, yInc;
-
 
 	switch (pattern)
 	{
 	case TIC_TAC_TOE:
-		xInt = width / 3; //Three intervals, each with width/3 pixels
-		xInc = 256.0 / ((double) xInt); //256 color intensities per interval. Notice that overflow is handled for this pattern.
 		for(xcoi = 0; xcoi < (width*3); xcoi+=3)
 		{
 			iPixelAddr = xcoi;
 
 			for(ycoi = 0; ycoi < height; ycoi++)
 			{
-				if ((xcoi % width/3 == 0) || (xcoi % width/3 == 1)|| (xcoi % width/3 == 2)|| (xcoi % width/3 == 3)|| (xcoi % width/3 == 4))
+				if ((xcoi % (width) == width - 4) || (xcoi % (width) == width - 3) || (xcoi % (width) == width - 2) || (xcoi % (width) == width - 1) || (xcoi % (width) == 0) || (xcoi % (width) == 1) || (xcoi % (width) == 2) || (xcoi % (width) == 3) || (xcoi % (width) == 4))
 				{
 					frame[iPixelAddr] = 0;
 					frame[iPixelAddr + 1] = 0;
 					frame[iPixelAddr + 2] = 0;
 					iPixelAddr += stride;
 				}
-				else if ((ycoi % (height/3) == 0) || (ycoi % (height/3) == 1)|| (ycoi % (height/3) == 2)|| (ycoi % (height/3) == 3)|| (ycoi % (height/3) == 4))
+				else if ((ycoi % (height/3) == height/3 - 2) || (ycoi % (height/3) == height/3 - 1)|| (ycoi % (height/3) == 0)|| (ycoi % (height/3) == 1)|| (ycoi % (height/3) == 2))
 				{
 					frame[iPixelAddr] = 0;
 					frame[iPixelAddr + 1] = 0;
@@ -456,6 +496,39 @@ void PrintPattern(u8 *frame, u32 width, u32 height, u32 stride, int pattern)
 		}
 		Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
 		break;
+	case BOX:
+		for(xcoi = 0; xcoi < (width*3); xcoi+=3)
+		{
+			iPixelAddr = xcoi;
+
+			for(ycoi = 0; ycoi < height; ycoi++)
+			{
+				if ((xcoi % (width) == width - 4) || (xcoi % (width) == width - 3) || (xcoi % (width) == width - 2) || (xcoi % (width) == width - 1) || (xcoi % (width) == 0) || (xcoi % (width) == 1) || (xcoi % (width) == 2) || (xcoi % (width) == 3) || (xcoi % (width) == 4))
+				{
+					if ((xcoi <= width*game_x + 8) && (xcoi >= ((width*3)/4)*(game_x - 1)) && (ycoi <= (height/3)*game_y) && (ycoi >= (height/3)*(game_y-1)))
+					{
+						frame[iPixelAddr + 0] = 0;
+						frame[iPixelAddr + 1] = 0;
+						frame[iPixelAddr + 2] = 255;
+						iPixelAddr += stride;
+					}
+
+				}
+				else if (((ycoi % (height/3) == (height/3) - 2) || (ycoi % (height/3) == (height/3) - 1)|| (ycoi % (height/3) == 0)|| (ycoi % (height/3) == 1)|| (ycoi % (height/3) == 2)))
+				{
+					if ((xcoi <= (width*(game_x))) && (xcoi >= (width)*(game_x - 1)) && (ycoi > 0) && (ycoi < 300))// && (ycoi <= (height/3)*game_y))// && (ycoi >= (height/3)*(game_y-1)))
+					{
+						frame[iPixelAddr + 0] = 0;
+						frame[iPixelAddr + 1] = 0;
+						frame[iPixelAddr + 2] = 255;
+						iPixelAddr += stride;
+					}
+				}
+
+			}
+		}
+		Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
+		break;
 	default :
 		xil_printf("Error: invalid pattern passed to DemoPrintTest");
 	}
@@ -467,6 +540,18 @@ void DemoISR(void *callBackRef, void *pVideo)
 {
 	char *data = (char *) callBackRef;
 	*data = 1; //set fRefresh to 1
+}
+
+void resetBoard()
+{
+	int x,y;
+	for (x = 0; x < 3; x++)
+	{
+		for (y = 0; y < 3; y++)
+		{
+			board[x][y] = NONE;
+		}
+	}
 }
 
 

@@ -34,9 +34,14 @@
 /*					Miscellaneous Declarations					*/
 /* ------------------------------------------------------------ */
 
-#define DEMO_PATTERN_0 0
-#define DEMO_PATTERN_1 1
-#define TIC_TAC_TOE    2
+#define TIC_TAC_TOE    0
+#define BOX            1
+#define MARKERS
+
+#define NONE           0
+#define GREEN          1
+#define BLUE           2
+
 
 #define DEMO_MAX_FRAME (1920*1080*3)
 #define DEMO_STRIDE (1920 * 3)
@@ -59,6 +64,7 @@ void DemoCRMenu();
 void PrintPattern(u8 *frame, u32 width, u32 height, u32 stride, int pattern);
 void DemoScaleFrame(u8 *srcFrame, u8 *destFrame, u32 srcWidth, u32 srcHeight, u32 destWidth, u32 destHeight, u32 stride);
 void DemoISR(void *callBackRef, void *pVideo);
+void resetBoard();
 
 /* ------------------------------------------------------------ */
 
