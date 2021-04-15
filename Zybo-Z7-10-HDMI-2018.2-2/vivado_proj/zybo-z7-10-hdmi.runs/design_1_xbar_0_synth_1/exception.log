@@ -1,4 +1,0 @@
-ERROR: Exception caught trying to open file C:\Users\Thomas\Desktop\Zybo-Z7-10-HDMI-2018.2-2\vivado_proj\zybo-z7-10-hdmi.runs\design_1_xbar_0_synth_1/runme.log
-	Exception name: Error
-	Exception error code: 70
-	Exception message: Permission denied

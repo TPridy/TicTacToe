@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun Mar 21 17:01:42 2021
+-- Date        : Sun Mar 21 17:01:41 2021
 -- Host        : DESKTOP-RBNBVI9 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/Thomas/Desktop/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_auto_pc_1 -prefix
+--               design_1_auto_pc_1_ design_1_auto_pc_1_stub.vhdl
 -- Design      : design_1_auto_pc_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z010clg400-1

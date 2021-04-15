@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue Apr  6 10:50:34 2021
+| Date         : Thu Apr 15 11:54:55 2021
 | Host         : DESKTOP-RBNBVI9 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |    5 |     0 |       100 |  5.00 |
+| Bonded IOB                  |    2 |     0 |       100 |  2.00 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         2 |  0.00 |
@@ -146,9 +146,8 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUFT    |    4 |                  IO |
-| IBUF     |    4 |                  IO |
-| OBUF     |    1 |                  IO |
+| OBUFT    |    2 |                  IO |
+| IBUF     |    2 |                  IO |
 +----------+------+---------------------+
 
 
@@ -160,9 +159,7 @@ Table of Contents
 +--------------------------------------+------+
 | design_1_xbar_1                      |    1 |
 | design_1_xbar_0                      |    1 |
-| design_1_v_vid_in_axi4s_0_0          |    1 |
 | design_1_v_tc_out_0                  |    1 |
-| design_1_v_tc_in_0                   |    1 |
 | design_1_v_axi4s_vid_out_0_0         |    1 |
 | design_1_s01_regslice_0              |    1 |
 | design_1_s00_regslice_0              |    1 |
@@ -170,13 +167,9 @@ Table of Contents
 | design_1_processing_system7_0_0      |    1 |
 | design_1_proc_sys_reset_fclk1_0      |    1 |
 | design_1_proc_sys_reset_fclk0_0      |    1 |
-| design_1_proc_sys_reset_0_0          |    1 |
 | design_1_m00_regslice_0              |    1 |
-| design_1_dvi2rgb_0_0                 |    1 |
 | design_1_axis_subset_converter_out_0 |    1 |
-| design_1_axis_subset_converter_in_0  |    1 |
 | design_1_axi_vdma_0_0                |    1 |
-| design_1_axi_gpio_video_0            |    1 |
 | design_1_axi_dynclk_0_0              |    1 |
 | design_1_auto_pc_1                   |    1 |
 | design_1_auto_pc_0                   |    1 |

@@ -2,14 +2,183 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Apr 15 09:11:48 2021
-# Process ID: 12476
+# Start of session at: Thu Apr 15 09:57:02 2021
+# Process ID: 6204
 # Current directory: C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9132 C:\Users\Thomas\Documents\GitHub\TicTacToe\Zybo-Z7-10-HDMI-2018.2-2\vivado_proj\zybo-z7-10-hdmi.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15936 C:\Users\Thomas\Documents\GitHub\TicTacToe\Zybo-Z7-10-HDMI-2018.2-2\vivado_proj\zybo-z7-10-hdmi.xpr
 # Log file: C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/vivado.log
 # Journal file: C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.xpr
 update_compile_order -fileset sources_1
+open_bd_design {C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_intf_nets hdmi_in_1] [get_bd_intf_ports hdmi_in]
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK2] [get_bd_intf_nets dvi2rgb_0_RGB] [get_bd_intf_nets dvi2rgb_0_DDC] [get_bd_cells dvi2rgb_0]
+delete_bd_objs [get_bd_nets proc_sys_reset_0_peripheral_aresetn] [get_bd_nets v_tc_in_irq] [get_bd_intf_nets axi_interconnect_gp0_M03_AXI] [get_bd_intf_nets v_vid_in_axi4s_0_vtiming_out] [get_bd_cells v_tc_in]
+set_property location {3 1003 783} [get_bd_cells processing_system7_0]
+delete_bd_objs [get_bd_nets dvi2rgb_0_PixelClk] [get_bd_nets proc_sys_reset_0_peripheral_reset] [get_bd_intf_nets v_vid_in_axi4s_0_video_out] [get_bd_cells v_vid_in_axi4s_0]
+delete_bd_objs [get_bd_intf_ports hdmi_in_ddc]
+delete_bd_objs [get_bd_nets axi_gpio_video_ip2intc_irpt] [get_bd_nets dvi2rgb_0_aPixelClkLckd] [get_bd_intf_nets axi_interconnect_gp0_M04_AXI] [get_bd_intf_nets axi_gpio_0_GPIO] [get_bd_cells axi_gpio_video]
+delete_bd_objs [get_bd_cells proc_sys_reset_0]
+delete_bd_objs [get_bd_intf_nets axis_subset_converter_in_M_AXIS] [get_bd_cells axis_subset_converter_in]
+undo
+delete_bd_objs [get_bd_intf_nets axis_subset_converter_in_M_AXIS] [get_bd_cells axis_subset_converter_in]
+regenerate_bd_layout
+validate_bd_design
+generate_target all [get_files  C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_xbar_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all design_1_s00_regslice_0] }
+catch { config_ip_cache -export [get_ips -all design_1_s01_regslice_0] }
+catch { config_ip_cache -export [get_ips -all design_1_m00_regslice_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_1] }
+export_ip_user_files -of_objects [get_files C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 8 design_1_xbar_0_synth_1
+export_simulation -of_objects [get_files C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.ip_user_files -ipstatic_source_dir C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.cache/compile_simlib/modelsim} {questa=C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.cache/compile_simlib/questa} {riviera=C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.cache/compile_simlib/riviera} {activehdl=C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+export_ip_user_files -of_objects  [get_files C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/imports/hdl/design_1_wrapper.v] -no_script -reset -force -quiet
+remove_files  C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/imports/hdl/design_1_wrapper.v
+file delete -force C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/imports/hdl/design_1_wrapper.v
+make_wrapper -files [get_files C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+file copy -force C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/impl_1/design_1_wrapper.sysdef C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.sdk -hwspec C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.sdk/design_1_wrapper.hdf
+open_bd_design {C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_intf_ports hdmi_in_hpd]
+startgroup
+set_property -dict [list CONFIG.NUM_MI {3}] [get_bd_cells axi_interconnect_gp0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.PCW_EN_CLK2_PORT {0} CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1}] [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.c_num_fstores {1}] [get_bd_cells axi_vdma_0]
+endgroup
+regenerate_bd_layout
+startgroup
+set_property -dict [list CONFIG.NUM_PORTS {3}] [get_bd_cells xlconcat_0]
+endgroup
+regenerate_bd_layout
+validate_bd_design
+export_ip_user_files -of_objects  [get_files C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v] -no_script -reset -force -quiet
+remove_files  C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+file delete -force C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+generate_target all [get_files  C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_axi_vdma_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_processing_system7_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_xbar_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all design_1_s00_regslice_0] }
+catch { config_ip_cache -export [get_ips -all design_1_s01_regslice_0] }
+catch { config_ip_cache -export [get_ips -all design_1_m00_regslice_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_1] }
+export_ip_user_files -of_objects [get_files C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 8 {design_1_processing_system7_0_0_synth_1 design_1_axi_vdma_0_0_synth_1 design_1_xbar_0_synth_1}
+export_simulation -of_objects [get_files C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.ip_user_files -ipstatic_source_dir C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.cache/compile_simlib/modelsim} {questa=C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.cache/compile_simlib/questa} {riviera=C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.cache/compile_simlib/riviera} {activehdl=C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+file copy -force C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/impl_1/design_1_wrapper.sysdef C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.sdk -hwspec C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.sdk/design_1_wrapper.hdf
+file copy -force C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/impl_1/design_1_wrapper.sysdef C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.sdk/design_1_wrapper.hdf
+
+set_property location {4 1438 584} [get_bd_cells axi_interconnect_gp0]
+set_property location {3 1038 487} [get_bd_cells axi_interconnect_gp0]
+set_property location {3 1095 191} [get_bd_cells axi_vdma_0]
+set_property location {2 599 168} [get_bd_cells proc_sys_reset_fclk1]
+set_property location {1 691 1071} [get_bd_cells proc_sys_reset_fclk1]
+set_property location {2 1012 1290} [get_bd_cells proc_sys_reset_fclk1]
+set_property location {1 556 819} [get_bd_cells axi_interconnect_hp0]
+set_property location {2.5 1545 807} [get_bd_cells axi_interconnect_gp0]
+set_property location {1 659 811} [get_bd_cells axi_interconnect_hp0]
+set_property location {3 1563 841} [get_bd_cells axi_interconnect_gp0]
+set_property location {3 1570 493} [get_bd_cells axi_dynclk_0]
+set_property location {3 1574 257} [get_bd_cells axi_vdma_0]
+set_property location {1 498 1048} [get_bd_cells xlconcat_0]
+set_property location {3 1547 1209} [get_bd_cells axi_interconnect_gp0]
+set_property location {3 1586 945} [get_bd_cells axi_dynclk_0]
+set_property location {3 1577 695} [get_bd_cells axi_vdma_0]
+set_property location {4 1993 587} [get_bd_cells v_tc_out]
+set_property location {4 1974 956} [get_bd_cells v_axi4s_vid_out_0]
+set_property location {5 2301 941} [get_bd_cells rgb2dvi_1]
+set_property location {5 2268 574} [get_bd_cells axis_subset_converter_out]
+set_property location {4 1914 1089} [get_bd_cells v_axi4s_vid_out_0]
+set_property location {4 1966 826} [get_bd_cells axis_subset_converter_out]
+regenerate_bd_layout
+set_property location {5 1833 819} [get_bd_cells axi_interconnect_gp0]
+set_property location {4 1812 1119} [get_bd_cells v_tc_out]
+set_property location {5 2208 1103} [get_bd_cells v_axi4s_vid_out_0]
+set_property location {5 2191 852} [get_bd_cells axis_subset_converter_out]
+set_property location {5.5 2527 1097} [get_bd_cells rgb2dvi_1]
+set_property location {3.5 1276 806} [get_bd_cells processing_system7_0]
+set_property location {4 1243 802} [get_bd_cells processing_system7_0]
+set_property location {4 1199 767} [get_bd_cells processing_system7_0]
+set_property location {4 1201 753} [get_bd_cells processing_system7_0]
+set_property location {4 1165 742} [get_bd_cells processing_system7_0]
+set_property location {4 1258 662} [get_bd_cells processing_system7_0]
+set_property location {4 1257 681} [get_bd_cells processing_system7_0]
+set_property location {4 1292 939} [get_bd_cells proc_sys_reset_fclk0]
+set_property location {3 1216 1153} [get_bd_cells proc_sys_reset_fclk1]
+set_property location {1.5 912 779} [get_bd_cells axi_interconnect_hp0]
+set_property location {2 912 860} [get_bd_cells axi_interconnect_hp0]
+set_property location {2 914 877} [get_bd_cells axi_interconnect_hp0]
+set_property location {2 913 570} [get_bd_cells xlconcat_0]
+set_property location {1 914 601} [get_bd_cells xlconcat_0]
+set_property location {1 907 971} [get_bd_cells axi_interconnect_hp0]
+set_property location {0.5 682 942} [get_bd_cells axi_interconnect_hp0]
+set_property location {0.5 448 900} [get_bd_cells axi_interconnect_hp0]
+set_property location {0.5 230 892} [get_bd_cells axi_interconnect_hp0]
+set_property location {1 175 853} [get_bd_cells axi_interconnect_hp0]
+set_property location {1 234 575} [get_bd_cells xlconcat_0]
+set_property location {1.5 646 594} [get_bd_cells processing_system7_0]
+set_property location {2 668 844} [get_bd_cells proc_sys_reset_fclk0]
+set_property location {2 707 1059} [get_bd_cells proc_sys_reset_fclk1]
+set_property location {2.5 1141 835} [get_bd_cells axi_interconnect_gp0]
+set_property location {3 1162 1120} [get_bd_cells v_tc_out]
+set_property location {3 1120 502} [get_bd_cells axi_dynclk_0]
+set_property location {3 1182 240} [get_bd_cells axi_vdma_0]
+set_property location {3 1100 10} [get_bd_cells subset_converter_reset]
+set_property location {3.5 1534 679} [get_bd_cells axis_subset_converter_out]
+set_property location {4 1525 925} [get_bd_cells v_axi4s_vid_out_0]
+set_property location {4.5 1923 938} [get_bd_cells rgb2dvi_1]
+set_property location {2176 934} [get_bd_intf_ports hdmi_out]
+set_property location {2663 654} [get_bd_intf_ports DDR]
+set_property location {3004 732} [get_bd_intf_ports DDR]
+set_property location {2741 692} [get_bd_intf_ports DDR]
+set_property location {2880 692} [get_bd_intf_ports DDR]
+set_property location {2937 692} [get_bd_intf_ports DDR]
+set_property location {2291 703} [get_bd_intf_ports DDR]
+regenerate_bd_layout
+write_bd_layout -format pdf -orientation portrait -force C:/Users/Thomas/Downloads/design_1.pdf
+regenerate_bd_layout -routing
+save_bd_design
+export_ip_user_files -of_objects  [get_files C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v] -no_script -reset -force -quiet
+remove_files  C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+file delete -force C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+generate_target all [get_files  C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd]
+export_simulation -of_objects [get_files C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.ip_user_files -ipstatic_source_dir C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.cache/compile_simlib/modelsim} {questa=C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.cache/compile_simlib/questa} {riviera=C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.cache/compile_simlib/riviera} {activehdl=C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+file copy -force C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.runs/impl_1/design_1_wrapper.sysdef C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.sdk/design_1_wrapper.hdf
+
 launch_sdk -workspace C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.sdk -hwspec C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.sdk/design_1_wrapper.hdf

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Zybo-Z7-10-HDMI/src/video_demo.h&apos; to &apos;tictactoe.h&apos;" description="Rename resource &apos;video_demo.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/video_demo.h" name="tictactoe.h" stamp="1618513119107" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Zybo-Z7-10-HDMI/src/video_demo.c&apos; to &apos;tictactoe.c&apos;" description="Rename resource &apos;video_demo.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/video_demo.c" name="tictactoe.c" stamp="1618513129219" updateReferences="true"/>
+</session>

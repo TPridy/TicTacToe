@@ -25,20 +25,8 @@
   "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/9097/src/axi_dynclk.vhd" \
   "../../../bd/design_1/ip/design_1_axi_dynclk_0_0/sim/design_1_axi_dynclk_0_0.vhd" \
 -endlib
--makelib ies_lib/axi_lite_ipif_v3_0_4 \
-  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
--endlib
 -makelib ies_lib/lib_cdc_v1_0_2 \
   "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
--endlib
--makelib ies_lib/interrupt_control_v3_1_4 \
-  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd" \
--endlib
--makelib ies_lib/axi_gpio_v2_0_20 \
-  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/a7c9/hdl/axi_gpio_v2_0_vh_rfs.vhd" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/design_1/ip/design_1_axi_gpio_video_0/sim/design_1_axi_gpio_video_0.vhd" \
 -endlib
 -makelib ies_lib/lib_pkg_v1_0_2 \
   "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/0513/hdl/lib_pkg_v1_0_rfs.vhd" \
@@ -83,20 +71,6 @@
   "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/af00/hdl/axis_register_slice_v1_1_vl_rfs.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tdata_design_1_axis_subset_converter_in_0.v" \
-  "../../../bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tuser_design_1_axis_subset_converter_in_0.v" \
-  "../../../bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tstrb_design_1_axis_subset_converter_in_0.v" \
-  "../../../bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tkeep_design_1_axis_subset_converter_in_0.v" \
-  "../../../bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tid_design_1_axis_subset_converter_in_0.v" \
-  "../../../bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tdest_design_1_axis_subset_converter_in_0.v" \
-  "../../../bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tlast_design_1_axis_subset_converter_in_0.v" \
--endlib
--makelib ies_lib/axis_subset_converter_v1_1_18 \
-  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/33dd/hdl/axis_subset_converter_v1_1_vl_rfs.v" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/top_design_1_axis_subset_converter_in_0.v" \
-  "../../../bd/design_1/ip/design_1_axis_subset_converter_in_0/sim/design_1_axis_subset_converter_in_0.v" \
   "../../../bd/design_1/ip/design_1_axis_subset_converter_out_0/hdl/tdata_design_1_axis_subset_converter_out_0.v" \
   "../../../bd/design_1/ip/design_1_axis_subset_converter_out_0/hdl/tuser_design_1_axis_subset_converter_out_0.v" \
   "../../../bd/design_1/ip/design_1_axis_subset_converter_out_0/hdl/tstrb_design_1_axis_subset_converter_out_0.v" \
@@ -104,33 +78,18 @@
   "../../../bd/design_1/ip/design_1_axis_subset_converter_out_0/hdl/tid_design_1_axis_subset_converter_out_0.v" \
   "../../../bd/design_1/ip/design_1_axis_subset_converter_out_0/hdl/tdest_design_1_axis_subset_converter_out_0.v" \
   "../../../bd/design_1/ip/design_1_axis_subset_converter_out_0/hdl/tlast_design_1_axis_subset_converter_out_0.v" \
-  "../../../bd/design_1/ip/design_1_axis_subset_converter_out_0/hdl/top_design_1_axis_subset_converter_out_0.v" \
-  "../../../bd/design_1/ip/design_1_axis_subset_converter_out_0/sim/design_1_axis_subset_converter_out_0.v" \
-  "../../../bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_refclk/sim/ila_refclk.v" \
-  "../../../bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/sim/ila_pixclk.v" \
+-endlib
+-makelib ies_lib/axis_subset_converter_v1_1_18 \
+  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/33dd/hdl/axis_subset_converter_v1_1_vl_rfs.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/be44/src/SyncBase.vhd" \
-  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/be44/src/EEPROM_8b.vhd" \
-  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/be44/src/TWI_SlaveCtl.vhd" \
-  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/be44/src/GlitchFilter.vhd" \
-  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/be44/src/SyncAsync.vhd" \
-  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/be44/src/DVI_Constants.vhd" \
-  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/be44/src/SyncAsyncReset.vhd" \
-  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/be44/src/PhaseAlign.vhd" \
-  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/be44/src/InputSERDES.vhd" \
-  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/be44/src/ChannelBond.vhd" \
-  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/be44/src/ResyncToBUFG.vhd" \
-  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/be44/src/TMDS_Decoder.vhd" \
-  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/be44/src/TMDS_Clocking.vhd" \
-  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/be44/src/dvi2rgb.vhd" \
-  "../../../bd/design_1/ip/design_1_dvi2rgb_0_0/sim/design_1_dvi2rgb_0_0.vhd" \
+  "../../../bd/design_1/ip/design_1_axis_subset_converter_out_0/hdl/top_design_1_axis_subset_converter_out_0.v" \
+  "../../../bd/design_1/ip/design_1_axis_subset_converter_out_0/sim/design_1_axis_subset_converter_out_0.v" \
 -endlib
 -makelib ies_lib/proc_sys_reset_v5_0_13 \
   "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/design_1/ip/design_1_proc_sys_reset_0_0/sim/design_1_proc_sys_reset_0_0.vhd" \
   "../../../bd/design_1/ip/design_1_proc_sys_reset_fclk0_0/sim/design_1_proc_sys_reset_fclk0_0.vhd" \
   "../../../bd/design_1/ip/design_1_proc_sys_reset_fclk1_0/sim/design_1_proc_sys_reset_fclk1_0.vhd" \
 -endlib
@@ -148,6 +107,9 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/20df/src/ClockGen.vhd" \
+  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/20df/src/SyncAsync.vhd" \
+  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/20df/src/SyncAsyncReset.vhd" \
+  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/20df/src/DVI_Constants.vhd" \
   "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/20df/src/OutputSERDES.vhd" \
   "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/20df/src/TMDS_Encoder.vhd" \
   "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/20df/src/rgb2dvi.vhd" \
@@ -158,6 +120,9 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_subset_converter_reset_0/sim/design_1_subset_converter_reset_0.v" \
+-endlib
+-makelib ies_lib/axi_lite_ipif_v3_0_4 \
+  "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
 -endlib
 -makelib ies_lib/v_tc_v6_1_13 \
   "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/a92c/hdl/v_tc_v6_1_vh_rfs.vhd" \
@@ -172,17 +137,17 @@
   "../../../bd/design_1/ip/design_1_v_axi4s_vid_out_0_0/sim/design_1_v_axi4s_vid_out_0_0.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/design_1/ip/design_1_v_tc_in_0/sim/design_1_v_tc_in_0.vhd" \
   "../../../bd/design_1/ip/design_1_v_tc_out_0/sim/design_1_v_tc_out_0.vhd" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/design_1/ip/design_1_v_vid_in_axi4s_0_0/sim/design_1_v_vid_in_axi4s_0_0.v" \
 -endlib
 -makelib ies_lib/xlconcat_v2_1_1 \
   "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_xlconcat_0_0/sim/design_1_xlconcat_0_0.v" \
+  "../../../bd/design_1/ip/design_1_xlconcat_0_0/design_1_xlconcat_0_0_sim_netlist.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_xlconcat_0_0/design_1_xlconcat_0_0_sim_netlist.vhdl" \
 -endlib
 -makelib ies_lib/generic_baseblocks_v2_1_0 \
   "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
@@ -199,6 +164,7 @@
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
   "../../../bd/design_1/ip/design_1_xbar_1/sim/design_1_xbar_1.v" \
+  "../../../bd/design_1/sim/design_1.v" \
 -endlib
 -makelib ies_lib/axi_protocol_converter_v2_1_18 \
   "../../../../zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
@@ -209,7 +175,6 @@
   "../../../bd/design_1/ip/design_1_s01_regslice_0/sim/design_1_s01_regslice_0.v" \
   "../../../bd/design_1/ip/design_1_m00_regslice_0/sim/design_1_m00_regslice_0.v" \
   "../../../bd/design_1/ip/design_1_auto_pc_1/sim/design_1_auto_pc_1.v" \
-  "../../../bd/design_1/sim/design_1.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   glbl.v

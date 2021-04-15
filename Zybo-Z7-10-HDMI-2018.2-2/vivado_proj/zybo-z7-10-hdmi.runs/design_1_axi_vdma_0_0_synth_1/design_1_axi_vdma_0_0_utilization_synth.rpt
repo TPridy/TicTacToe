@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun Mar 21 17:05:20 2021
+| Date         : Thu Apr 15 10:30:41 2021
 | Host         : DESKTOP-RBNBVI9 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_axi_vdma_0_0_utilization_synth.rpt -pb design_1_axi_vdma_0_0_utilization_synth.pb
 | Design       : design_1_axi_vdma_0_0
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 3256 |     0 |     17600 | 18.50 |
-|   LUT as Logic             | 2952 |     0 |     17600 | 16.77 |
+| Slice LUTs*                | 3092 |     0 |     17600 | 17.57 |
+|   LUT as Logic             | 2788 |     0 |     17600 | 15.84 |
 |   LUT as Memory            |  304 |     0 |      6000 |  5.07 |
 |     LUT as Distributed RAM |    8 |     0 |           |       |
 |     LUT as Shift Register  |  296 |     0 |           |       |
-| Slice Registers            | 4465 |     0 |     35200 | 12.68 |
-|   Register as Flip Flop    | 4465 |     0 |     35200 | 12.68 |
+| Slice Registers            | 4150 |     0 |     35200 | 11.79 |
+|   Register as Flip Flop    | 4150 |     0 |     35200 | 11.79 |
 |   Register as Latch        |    0 |     0 |     35200 |  0.00 |
 | F7 Muxes                   |    6 |     0 |      8800 |  0.07 |
 | F8 Muxes                   |    0 |     0 |      4400 |  0.00 |
@@ -58,8 +58,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 145   |          Yes |         Set |            - |
-| 4320  |          Yes |       Reset |            - |
+| 140   |          Yes |         Set |            - |
+| 4010  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -150,16 +150,16 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 4320 |        Flop & Latch |
-| LUT6     |  747 |                 LUT |
-| LUT5     |  641 |                 LUT |
-| LUT3     |  636 |                 LUT |
-| LUT4     |  607 |                 LUT |
-| LUT2     |  482 |                 LUT |
-| LUT1     |  312 |                 LUT |
+| FDRE     | 4010 |        Flop & Latch |
+| LUT6     |  711 |                 LUT |
+| LUT3     |  631 |                 LUT |
+| LUT4     |  585 |                 LUT |
+| LUT5     |  518 |                 LUT |
+| LUT2     |  487 |                 LUT |
+| LUT1     |  314 |                 LUT |
 | SRL16E   |  296 |  Distributed Memory |
 | CARRY4   |  156 |          CarryLogic |
-| FDSE     |  145 |        Flop & Latch |
+| FDSE     |  140 |        Flop & Latch |
 | RAMD32   |   12 |  Distributed Memory |
 | RAMB36E1 |    6 |        Block Memory |
 | MUXF7    |    6 |               MuxFx |

@@ -19,7 +19,7 @@ SUBDIRS := \
 src/display_ctrl \
 src/dynclk \
 src/intc \
+src \
 src/timer_ps \
 src/video_capture \
-src \
 
