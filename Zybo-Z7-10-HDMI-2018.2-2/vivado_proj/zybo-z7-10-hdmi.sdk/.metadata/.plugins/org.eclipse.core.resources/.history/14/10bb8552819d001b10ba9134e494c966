@@ -505,26 +505,26 @@ void PrintPattern(u8 *frame, u32 width, u32 height, u32 stride, int pattern)
 			{
 				if ((xcoi % (width) == width - 4) || (xcoi % (width) == width - 3) || (xcoi % (width) == width - 2) || (xcoi % (width) == width - 1) || (xcoi % (width) == 0) || (xcoi % (width) == 1) || (xcoi % (width) == 2) || (xcoi % (width) == 3) || (xcoi % (width) == 4))
 				{
-					if ((xcoi <= width*game_x + 8) && (xcoi >= ((width*3)/4)*(game_x - 1)) && (ycoi <= (height/3)*(game_y) ) && (ycoi >= (height/3)*(game_y-1)))
+					if ((xcoi <= width*game_x + 8) && (xcoi >= ((width*3)/4)*(game_x - 1)) && (ycoi <= (height/3)*(game_y-1)))//&& (ycoi <= (height/3)*game_y)
 					{
 						frame[iPixelAddr + 0] = 0;
 						frame[iPixelAddr + 1] = 0;
 						frame[iPixelAddr + 2] = 255;
+						iPixelAddr += stride;
 					}
-					//iPixelAddr += stride;
 
 				}
-				else if ((ycoi % (height/3) == height/3 - 2) || (ycoi % (height/3) == height/3 - 1)|| (ycoi % (height/3) == 0)|| (ycoi % (height/3) == 1)|| (ycoi % (height/3) == 2))
+				else if (((ycoi % (height/3) == (height/3) - 2) || (ycoi % (height/3) == (height/3) - 1)|| (ycoi % (height/3) == 0)|| (ycoi % (height/3) == 1)|| (ycoi % (height/3) == 2)))
 				{
-					if ((xcoi <= width*game_x ) && (xcoi >= ((width))*(game_x - 1)) && (ycoi <= (height/3)*(game_y) ) && (ycoi >= (height/3)*(game_y-1)))
+					if ((xcoi <= (width*(game_x))) && (xcoi >= (width)*(game_x - 1)) && (ycoi > 0) && (ycoi < 300))// && (ycoi <= (height/3)*game_y))// && (ycoi >= (height/3)*(game_y-1)))
 					{
 						frame[iPixelAddr + 0] = 0;
 						frame[iPixelAddr + 1] = 0;
 						frame[iPixelAddr + 2] = 255;
+						iPixelAddr += stride;
 					}
-
 				}
-				iPixelAddr += stride;
+
 			}
 		}
 		Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
