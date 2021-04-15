@@ -160,7 +160,7 @@ void Display_Initialize()
 	/*
 	 * Set the Video Detect callback to trigger the menu to reset, displaying the new detected resolution
 	 */
-	VideoSetCallback(&videoCapt, DemoISR, &fRefresh);
+	VideoSetCallback(&videoCapt, ISR, &fRefresh);
 
 	PrintPattern(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, dispCtrl.stride, TIC_TAC_TOE);
 	PrintPattern(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, dispCtrl.stride, BOX);
@@ -182,7 +182,7 @@ void GameRun()
 	while (userInput != 'q')
 	{
 		fRefresh = 0;
-		DemoPrintMenu();
+		PrintMenu();
 
 		/* Wait for data on UART */
 		while (!XUartPs_IsReceiveData(UART_BASEADDR) && !fRefresh)
@@ -202,7 +202,7 @@ void GameRun()
 		switch (userInput)
 		{
 		case 'y':
-			DemoChangeRes();
+			ChangeRes();
 			break;
 		case 'n':
 			game_x = 1;
@@ -256,7 +256,7 @@ void GameRun()
 	return;
 }
 
-void DemoPrintMenu()
+void PrintMenu()
 {
 	xil_printf("\x1B[H"); //Set cursor to top left of terminal
 	xil_printf("\x1B[2J"); //Clear terminal
@@ -264,11 +264,8 @@ void DemoPrintMenu()
 	xil_printf("*                Tic Tac Toe Game                  *\n\r");
 	xil_printf("**************************************************\n\r");
 	xil_printf("*Display Resolution: %28s*\n\r", dispCtrl.vMode.label);
-	//printf("*Display Pixel Clock Freq. (MHz): %15.3f*\n\r", dispCtrl.pxlFreq);
-	//xil_printf("*Display Frame Index: %27d*\n\r", dispCtrl.curFrame);
 	xil_printf("**************************************************\n\r");
 	xil_printf("\n\r");
-	xil_printf("y - Change Display Resolution\n\r");
 	xil_printf("n - New TicTacToe Game\n\r");
 	xil_printf("w - Move up\n\r");
 	xil_printf("a - Move left\n\r");
@@ -279,13 +276,11 @@ void DemoPrintMenu()
 	xil_printf("\n\r");
 	xil_printf("x = %d ",game_x);
 	xil_printf("y = %d ",game_y);
-	xil_printf("(height/3)*game_y = %d ",(dispCtrl.vMode.height/3)*game_y);
-	xil_printf("(height/3)*game_y-1 = %d ",(dispCtrl.vMode.height/3)*(game_y-1));
 	xil_printf("\n\r");
 	xil_printf("Enter a selection:");
 }
 
-void DemoChangeRes()
+void ChangeRes()
 {
 	int fResSet = 0;
 	int status;
@@ -299,7 +294,7 @@ void DemoChangeRes()
 
 	while (!fResSet)
 	{
-		DemoCRMenu();
+		CRMenu();
 
 		/* Wait for data on UART */
 		while (!XUartPs_IsReceiveData(UART_BASEADDR))
@@ -361,7 +356,7 @@ void DemoChangeRes()
 	}
 }
 
-void DemoCRMenu()
+void CRMenu()
 {
 	xil_printf("\x1B[H"); //Set cursor to top left of terminal
 	xil_printf("\x1B[2J"); //Clear terminal
@@ -387,7 +382,7 @@ void DemoCRMenu()
 /*
  * Bilinear interpolation algorithm. Assumes both frames have the same stride.
  */
-void DemoScaleFrame(u8 *srcFrame, u8 *destFrame, u32 srcWidth, u32 srcHeight, u32 destWidth, u32 destHeight, u32 stride)
+void ScaleFrame(u8 *srcFrame, u8 *destFrame, u32 srcWidth, u32 srcHeight, u32 destWidth, u32 destHeight, u32 stride)
 {
 	float xInc, yInc; // Width/height of a destination frame pixel in the source frame coordinate system
 	float xcoSrc, ycoSrc; // Location of the destination pixel being operated on in the source frame coordinate system
@@ -534,9 +529,7 @@ void PrintPattern(u8 *frame, u32 width, u32 height, u32 stride, int pattern)
 	}
 }
 
-
-
-void DemoISR(void *callBackRef, void *pVideo)
+void ISR(void *callBackRef, void *pVideo)
 {
 	char *data = (char *) callBackRef;
 	*data = 1; //set fRefresh to 1
