@@ -1,23 +1,8 @@
-12:03:21 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+13:35:38 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/tictactoe.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
-'Finished building: ../src/tictactoe.c'
-' '
-'Building target: Zybo-Z7-10-HDMI.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Zybo-Z7-10-HDMI.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 116916	   3528	6247040	6367484	 6128fc	Zybo-Z7-10-HDMI.elf
-'Finished building: Zybo-Z7-10-HDMI.elf.size'
-' '
+make: Nothing to be done for 'main-build'.
 
-12:03:22 Build Finished (took 804ms)
+13:35:38 Build Finished (took 257ms)
 

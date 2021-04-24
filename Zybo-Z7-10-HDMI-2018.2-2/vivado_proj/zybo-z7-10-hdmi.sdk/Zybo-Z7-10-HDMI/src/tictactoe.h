@@ -65,6 +65,7 @@ void PrintPattern(u8 *frame, u32 width, u32 height, u32 stride, int pattern);
 void ScaleFrame(u8 *srcFrame, u8 *destFrame, u32 srcWidth, u32 srcHeight, u32 destWidth, u32 destHeight, u32 stride);
 void ISR(void *callBackRef, void *pVideo);
 void resetBoard();
+void checkForWin(int color);
 
 /* ------------------------------------------------------------ */
 

@@ -43,7 +43,6 @@
 /* ------------------------------------------------------------ */
 /*				Global Variables								*/
 /* ------------------------------------------------------------ */
-
 /*
  * Display and Video Driver structs
  */
@@ -51,9 +50,12 @@ DisplayCtrl dispCtrl;
 XAxiVdma vdma;
 INTC intc;
 char fRefresh; //flag used to trigger a refresh of the Menu on video detect
-char game_x = 1;
-char game_y = 1;
-char board[3][3];
+int game_x = 1;
+int game_y = 1;
+int marker = GREEN;
+int win = 0;
+int turns = 0;
+int board[3][3];
 
 /*
  * Framebuffers for video data
@@ -127,21 +129,6 @@ void Display_Initialize()
 		return;
 	}
 
-	/*
-	 * Initialize the Interrupt controller and start it.
-	 */
-	/*Status = fnInitInterruptController(&intc);
-	if(Status != XST_SUCCESS) {
-		xil_printf("Error initializing interrupts");
-		return;
-	}
-	fnEnableInterrupts(&intc, &ivt[0], sizeof(ivt)/sizeof(ivt[0]));*/
-
-	/*
-	 * Set the Video Detect callback to trigger the menu to reset, displaying the new detected resolution
-	 */
-	//VideoSetCallback(&videoCapt, ISR, &fRefresh);
-
 	PrintPattern(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, dispCtrl.stride, TIC_TAC_TOE);
 	PrintPattern(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, dispCtrl.stride, BOX);
 
@@ -188,6 +175,7 @@ void GameRun()
 			game_x = 1;
 			game_y = 1;
 			resetBoard();
+			marker = GREEN;
 			PrintPattern(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, TIC_TAC_TOE);
 			PrintPattern(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, BOX);
 			break;
@@ -223,6 +211,61 @@ void GameRun()
 				PrintPattern(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, BOX);
 			}
 			break;
+		case 'g':
+			if ((board[game_x-1][game_y-1] == NONE))
+			{
+				board[game_x-1][game_y-1] = marker;
+				PrintPattern(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, TIC_TAC_TOE);
+				PrintPattern(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, BOX);
+				turns++;
+				checkForWin(marker);
+				//If win, reset game. Otherwise change turns
+				if (win == 1)
+				{
+					game_x = 1;
+					game_y = 1;
+					resetBoard();
+					xil_printf("\x1B[H"); //Set cursor to top left of terminal
+					xil_printf("\x1B[2J"); //Clear terminal
+					switch(marker)
+					{
+					case GREEN:
+						xil_printf("Congratulations! GREEN won!\n\r");
+						xil_printf("Resetting...\n\r");
+						break;
+					case BLUE:
+						xil_printf("Congratulations! BLUE won!\n\r");
+						xil_printf("Resetting...\n\r");
+						break;
+					}
+					marker = GREEN;
+					win = 0;
+					TimerDelay(1000000);
+					PrintPattern(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, TIC_TAC_TOE);
+					PrintPattern(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, BOX);
+				}
+				else if (turns >= 9)
+				{
+					turns = 0;
+					game_x = 1;
+					game_y = 1;
+					marker = GREEN;
+					resetBoard();
+					xil_printf("\x1B[H"); //Set cursor to top left of terminal
+					xil_printf("\x1B[2J"); //Clear terminal
+					xil_printf("Stalemate!\n\r");
+					xil_printf("Resetting...\n\r");
+					TimerDelay(1000000);
+					PrintPattern(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, TIC_TAC_TOE);
+					PrintPattern(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, BOX);
+				}
+				else
+				{
+					if (marker == GREEN) marker = BLUE;
+					else marker = GREEN;
+				}
+			}
+			break;
 		case 'q':
 			break;
 		case 'r':
@@ -247,6 +290,7 @@ void PrintMenu()
 	xil_printf("**************************************************\n\r");
 	xil_printf("\n\r");
 	xil_printf("n - New TicTacToe Game\n\r");
+	xil_printf("g - Mark tile\n\r");
 	xil_printf("w - Move up\n\r");
 	xil_printf("a - Move left\n\r");
 	xil_printf("s - Move down\n\r");
@@ -255,7 +299,10 @@ void PrintMenu()
 	xil_printf("q - Quit\n\r");
 	xil_printf("\n\r");
 	xil_printf("x = %d ",game_x);
-	xil_printf("y = %d ",game_y);
+	xil_printf("y = %d \n\r",game_y);
+	xil_printf("%d %d %d\n\r",board[0][0],board[1][0],board[2][0]);
+	xil_printf("%d %d %d\n\r",board[0][1],board[1][1],board[2][1]);
+	xil_printf("%d %d %d\n\r",board[0][2],board[1][2],board[2][2]);
 	xil_printf("\n\r");
 	xil_printf("Enter a selection:");
 }
@@ -461,10 +508,38 @@ void PrintPattern(u8 *frame, u32 width, u32 height, u32 stride, int pattern)
 				}
 				else
 				{
-					frame[iPixelAddr] = 255;
-					frame[iPixelAddr + 1] = 255;
-					frame[iPixelAddr + 2] = 255;
+					int red = 0;
+					int green = 0;
+					int blue = 0;
+					for (int c = 0; c < 3; c++)
+					{
+						for (int b = 0; b < 3; b++)
+						{
+							if ((board[c][b] == GREEN) && (xcoi <= (width)*(c+1)) && (xcoi >= (width)*(c)) && (ycoi <= (height/3)*(b+1)) && (ycoi >= (height/3)*(b)))
+							{
+								red = 0;
+								green = 255;
+								blue = 0;
+							}
+							else if ((board[c][b] == BLUE) && (xcoi <= (width)*(c+1)) && (xcoi >= (width)*(c)) && (ycoi <= (height/3)*(b+1)) && (ycoi >= (height/3)*(b)))
+							{
+								red = 0;
+								green = 0;
+								blue = 255;
+							}
+							else if ((board[c][b] == NONE) && (xcoi <= (width)*(c+1)) && (xcoi >= (width)*(c)) && (ycoi <= (height/3)*(b+1)) && (ycoi >= (height/3)*(b)))
+							{
+								red = 255;
+								green = 255;
+								blue = 255;
+							}
+						}
+					}
+					frame[iPixelAddr] = blue;
+					frame[iPixelAddr + 1] = green;
+					frame[iPixelAddr + 2] = red;
 					iPixelAddr += stride;
+
 				}
 
 			}
@@ -486,7 +561,6 @@ void PrintPattern(u8 *frame, u32 width, u32 height, u32 stride, int pattern)
 						frame[iPixelAddr + 1] = 0;
 						frame[iPixelAddr + 2] = 255;
 					}
-					//iPixelAddr += stride;
 
 				}
 				else if ((ycoi % (height/3) == height/3 - 2) || (ycoi % (height/3) == height/3 - 1)|| (ycoi % (height/3) == 0)|| (ycoi % (height/3) == 1)|| (ycoi % (height/3) == 2))
@@ -525,6 +599,43 @@ void resetBoard()
 			board[x][y] = NONE;
 		}
 	}
+}
+
+void checkForWin(int color)
+{
+	if ((board[0][0] == color) &&  (board[1][0] == color) && (board[2][0] == color))
+	{
+		win = 1;
+	}
+	else if ((board[0][1] == color) &&  (board[1][1] == color) && (board[2][1] == color))
+	{
+		win = 1;
+	}
+	else if ((board[0][2] == color) &&  (board[1][2] == color) && (board[2][2] == color))
+	{
+		win = 1;
+	}
+	else if ((board[0][0] == color) &&  (board[0][1] == color) && (board[0][2] == color))
+	{
+		win = 1;
+	}
+	else if ((board[1][0] == color) &&  (board[1][1] == color) && (board[1][2] == color))
+	{
+		win = 1;
+	}
+	else if ((board[2][0] == color) &&  (board[2][1] == color) && (board[2][2] == color))
+	{
+		win = 1;
+	}
+	else if ((board[0][0] == color) &&  (board[1][1] == color) && (board[2][2] == color))
+	{
+		win = 1;
+	}
+	else if ((board[0][2] == color) &&  (board[1][1] == color) && (board[2][0] == color))
+	{
+		win = 1;
+	}
+
 }
 
 

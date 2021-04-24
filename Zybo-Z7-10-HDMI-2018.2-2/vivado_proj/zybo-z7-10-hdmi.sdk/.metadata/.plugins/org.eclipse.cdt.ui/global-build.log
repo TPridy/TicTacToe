@@ -9473,3 +9473,2019 @@ arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
  116916	   3528	6247040	6367484	 6128fc	Zybo-Z7-10-HDMI.elf
 'Finished building: Zybo-Z7-10-HDMI.elf.size'
 ' '
+08:59:08 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+09:24:30 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:17:15 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:22:34 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'PrintPattern':
+../src/tictactoe.c:468:17: warning: array subscript has type 'char' [-Wchar-subscripts]
+        if (board[c][b] == GREEN)
+                 ^
+../src/tictactoe.c:468:20: warning: array subscript has type 'char' [-Wchar-subscripts]
+        if (board[c][b] == GREEN)
+                    ^
+../src/tictactoe.c:475:22: warning: array subscript has type 'char' [-Wchar-subscripts]
+        else if (board[c][b] == BLUE)
+                      ^
+../src/tictactoe.c:475:25: warning: array subscript has type 'char' [-Wchar-subscripts]
+        else if (board[c][b] == BLUE)
+                         ^
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117236	   3528	6247040	6367804	 612a3c	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:22:56 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117236	   3528	6247072	6367836	 612a5c	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:24:50 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'PrintPattern':
+../src/tictactoe.c:469:8: error: expected ')' before '{' token
+        {
+        ^
+../src/tictactoe.c:489:7: error: expected expression before '}' token
+       }
+       ^
+make: *** [src/subdir.mk:23: src/tictactoe.o] Error 1
+12:24:55 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117300	   3528	6247072	6367900	 612a9c	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:25:04 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117300	   3528	6247072	6367900	 612a9c	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:25:20 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'PrintPattern':
+../src/tictactoe.c:468:48: error: 'widths' undeclared (first use in this function); did you mean 'width'?
+        if ((board[c][b] == GREEN) && (xcoi <= (widths)*(c)))
+                                                ^~~~~~
+                                                width
+../src/tictactoe.c:468:48: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/tictactoe.o] Error 1
+12:25:21 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117236	   3528	6247072	6367836	 612a5c	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:25:26 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117236	   3528	6247072	6367836	 612a5c	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:25:53 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117300	   3528	6247072	6367900	 612a9c	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:27:30 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'PrintPattern':
+../src/tictactoe.c:469:8: error: expected ')' before '{' token
+        {
+        ^
+../src/tictactoe.c:489:7: error: expected expression before '}' token
+       }
+       ^
+make: *** [src/subdir.mk:23: src/tictactoe.o] Error 1
+12:27:32 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117364	   3528	6247072	6367964	 612adc	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:28:34 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'GameRun':
+../src/tictactoe.c:226:3: error: duplicate case value
+   case 'y':
+   ^~~~
+../src/tictactoe.c:184:3: note: previously used here
+   case 'y':
+   ^~~~
+../src/tictactoe.c:227:9: warning: array subscript has type 'char' [-Wchar-subscripts]
+    board[game_x][game_y] = GREEN;
+         ^
+../src/tictactoe.c:227:17: warning: array subscript has type 'char' [-Wchar-subscripts]
+    board[game_x][game_y] = GREEN;
+                 ^
+make: *** [src/subdir.mk:23: src/tictactoe.o] Error 1
+12:28:45 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'GameRun':
+../src/tictactoe.c:226:3: error: duplicate case value
+   case 'y':
+   ^~~~
+../src/tictactoe.c:184:3: note: previously used here
+   case 'y':
+   ^~~~
+make: *** [src/subdir.mk:23: src/tictactoe.o] Error 1
+12:28:59 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117556	   3528	6247072	6368156	 612b9c	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:29:12 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:30:41 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117556	   3528	6247072	6368156	 612b9c	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:31:23 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'PrintPattern':
+../src/tictactoe.c:469:20: warning: unused variable 'blue' [-Wunused-variable]
+      int red,green,blue = 0;
+                    ^~~~
+../src/tictactoe.c:469:14: warning: unused variable 'green' [-Wunused-variable]
+      int red,green,blue = 0;
+              ^~~~~
+../src/tictactoe.c:469:10: warning: unused variable 'red' [-Wunused-variable]
+      int red,green,blue = 0;
+          ^~~
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117556	   3528	6247072	6368156	 612b9c	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:31:44 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'PrintPattern':
+../src/tictactoe.c:471:10: warning: unused variable 'blue' [-Wunused-variable]
+      int blue = 0;
+          ^~~~
+../src/tictactoe.c:470:10: warning: unused variable 'green' [-Wunused-variable]
+      int green = 0;
+          ^~~~~
+../src/tictactoe.c:469:10: warning: unused variable 'red' [-Wunused-variable]
+      int red = 0;
+          ^~~
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117556	   3528	6247072	6368156	 612b9c	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:33:08 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117492	   3528	6247072	6368092	 612b5c	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:33:21 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:34:57 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117492	   3528	6247072	6368092	 612b5c	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:36:29 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117628	   3528	6247072	6368228	 612be4	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:36:42 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:37:16 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117636	   3528	6247072	6368236	 612bec	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:38:18 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117636	   3528	6247072	6368236	 612bec	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:38:28 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:38:41 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117636	   3528	6247072	6368236	 612bec	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:38:58 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:39:37 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117636	   3528	6247072	6368236	 612bec	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:39:53 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:40:56 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117828	   3528	6247072	6368428	 612cac	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:40:59 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117828	   3528	6247072	6368428	 612cac	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:49:00 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117828	   3528	6247072	6368428	 612cac	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:49:12 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:49:55 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117828	   3528	6247072	6368428	 612cac	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:50:24 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117828	   3528	6247072	6368428	 612cac	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:50:41 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:51:33 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117828	   3528	6247072	6368428	 612cac	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:53:15 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117828	   3528	6247072	6368428	 612cac	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:53:27 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:53:59 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117828	   3528	6247072	6368428	 612cac	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:54:07 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117828	   3528	6247072	6368428	 612cac	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:54:17 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:55:04 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117828	   3528	6247072	6368428	 612cac	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+12:59:50 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118148	   3528	6247072	6368748	 612dec	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:00:03 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:00:46 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:02:30 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118148	   3536	6247072	6368756	 612df4	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:02:53 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117956	   3536	6247072	6368564	 612d34	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:03:20 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118020	   3536	6247072	6368628	 612d74	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:03:32 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:04:37 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118148	   3536	6247072	6368756	 612df4	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:04:52 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:05:55 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118084	   3536	6247072	6368692	 612db4	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:06:06 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:06:20 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118084	   3536	6247072	6368692	 612db4	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:06:30 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:07:01 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118084	   3536	6247072	6368692	 612db4	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:07:10 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:08:20 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118148	   3536	6247072	6368756	 612df4	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:10:14 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118164	   3536	6247072	6368772	 612e04	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:10:44 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118292	   3536	6247072	6368900	 612e84	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:11:41 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:576:6: warning: unused variable 'win' [-Wunused-variable]
+  int win = 0;
+      ^~~
+../src/tictactoe.c:585:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118292	   3536	6247072	6368900	 612e84	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:11:55 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:581:2: error: expected expression before '}' token
+  }
+  ^
+../src/tictactoe.c:576:6: warning: unused variable 'win' [-Wunused-variable]
+  int win = 0;
+      ^~~
+../src/tictactoe.c:575:8: warning: unused variable 'y' [-Wunused-variable]
+  int x,y;
+        ^
+../src/tictactoe.c:582:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/tictactoe.o] Error 1
+13:12:10 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:581:2: error: expected expression before '}' token
+  }
+  ^
+../src/tictactoe.c:576:6: warning: unused variable 'win' [-Wunused-variable]
+  int win = 0;
+      ^~~
+../src/tictactoe.c:575:8: warning: unused variable 'y' [-Wunused-variable]
+  int x,y;
+        ^
+../src/tictactoe.c:582:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/tictactoe.o] Error 1
+13:12:40 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:576:6: warning: variable 'win' set but not used [-Wunused-but-set-variable]
+  int win = 0;
+      ^~~
+../src/tictactoe.c:575:8: warning: unused variable 'y' [-Wunused-variable]
+  int x,y;
+        ^
+../src/tictactoe.c:575:6: warning: unused variable 'x' [-Wunused-variable]
+  int x,y;
+      ^
+../src/tictactoe.c:579:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118228	   3536	6247072	6368836	 612e44	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:12:44 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:575:6: warning: variable 'win' set but not used [-Wunused-but-set-variable]
+  int win = 0;
+      ^~~
+../src/tictactoe.c:578:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118228	   3536	6247072	6368836	 612e44	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:13:23 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:575:6: warning: variable 'win' set but not used [-Wunused-but-set-variable]
+  int win = 0;
+      ^~~
+../src/tictactoe.c:581:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118228	   3536	6247072	6368836	 612e44	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:13:29 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118228	   3536	6247072	6368836	 612e44	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:14:10 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118292	   3536	6247072	6368900	 612e84	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:14:24 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118292	   3536	6247072	6368900	 612e84	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:14:35 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118292	   3536	6247072	6368900	 612e84	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:17:07 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118868	   3536	6247072	6369476	 6130c4	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:18:08 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'GameRun':
+../src/tictactoe.c:237:5: error: 'i' undeclared (first use in this function)
+     i
+     ^
+../src/tictactoe.c:237:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/tictactoe.c:238:4: error: expected ';' before '}' token
+    }
+    ^
+make: *** [src/subdir.mk:23: src/tictactoe.o] Error 1
+13:18:16 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'GameRun':
+../src/tictactoe.c:237:5: error: 'i' undeclared (first use in this function)
+     i
+     ^
+../src/tictactoe.c:237:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/tictactoe.c:238:4: error: expected ';' before '}' token
+    }
+    ^
+make: *** [src/subdir.mk:23: src/tictactoe.o] Error 1
+13:18:34 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'GameRun':
+../src/tictactoe.c:237:11: warning: implicit declaration of function 'checkforWin' [-Wimplicit-function-declaration]
+     won = checkforWin(GREEN);
+           ^~~~~~~~~~~
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/tictactoe.o: In function `GameRun':
+C:\Users\Thomas\Documents\GitHub\TicTacToe\Zybo-Z7-10-HDMI-2018.2-2\vivado_proj\zybo-z7-10-hdmi.sdk\Zybo-Z7-10-HDMI\Debug/../src/tictactoe.c:237: undefined reference to `checkforWin'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:46: Zybo-Z7-10-HDMI.elf] Error 1
+13:18:51 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'GameRun':
+../src/tictactoe.c:237:11: warning: implicit declaration of function 'checkforWin'; did you mean 'checkForWin'? [-Wimplicit-function-declaration]
+     won = checkforWin(GREEN);
+           ^~~~~~~~~~~
+           checkForWin
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/tictactoe.o: In function `GameRun':
+C:\Users\Thomas\Documents\GitHub\TicTacToe\Zybo-Z7-10-HDMI-2018.2-2\vivado_proj\zybo-z7-10-hdmi.sdk\Zybo-Z7-10-HDMI\Debug/../src/tictactoe.c:237: undefined reference to `checkforWin'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:46: Zybo-Z7-10-HDMI.elf] Error 1
+13:19:06 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'GameRun':
+../src/tictactoe.c:237:11: warning: implicit declaration of function 'checkforWin'; did you mean 'checkForWin'? [-Wimplicit-function-declaration]
+     won = checkforWin(GREEN);
+           ^~~~~~~~~~~
+           checkForWin
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/tictactoe.o: In function `GameRun':
+C:\Users\Thomas\Documents\GitHub\TicTacToe\Zybo-Z7-10-HDMI-2018.2-2\vivado_proj\zybo-z7-10-hdmi.sdk\Zybo-Z7-10-HDMI\Debug/../src/tictactoe.c:237: undefined reference to `checkforWin'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:46: Zybo-Z7-10-HDMI.elf] Error 1
+13:19:33 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'GameRun':
+../src/tictactoe.c:237:11: warning: implicit declaration of function 'checkforWin'; did you mean 'checkForWin'? [-Wimplicit-function-declaration]
+     won = checkforWin(GREEN);
+           ^~~~~~~~~~~
+           checkForWin
+../src/tictactoe.c: At top level:
+../src/tictactoe.c:575:5: error: conflicting types for 'checkForWin'
+ int checkForWin(int color)
+     ^~~~~~~~~~~
+In file included from ../src/tictactoe.c:32:0:
+../src/tictactoe.h:68:6: note: previous declaration of 'checkForWin' was here
+ void checkForWin(int color);
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/tictactoe.o] Error 1
+13:19:41 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'GameRun':
+../src/tictactoe.c:237:11: warning: implicit declaration of function 'checkforWin'; did you mean 'checkForWin'? [-Wimplicit-function-declaration]
+     won = checkforWin(GREEN);
+           ^~~~~~~~~~~
+           checkForWin
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:612:9: warning: 'return' with a value, in function returning void
+  return win;
+         ^~~
+../src/tictactoe.c:575:6: note: declared here
+ void checkForWin(int color)
+      ^~~~~~~~~~~
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/tictactoe.o: In function `GameRun':
+C:\Users\Thomas\Documents\GitHub\TicTacToe\Zybo-Z7-10-HDMI-2018.2-2\vivado_proj\zybo-z7-10-hdmi.sdk\Zybo-Z7-10-HDMI\Debug/../src/tictactoe.c:237: undefined reference to `checkforWin'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:46: Zybo-Z7-10-HDMI.elf] Error 1
+13:19:54 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'GameRun':
+../src/tictactoe.c:237:9: error: void value not ignored as it ought to be
+     won = checkForWin(GREEN);
+         ^
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:612:9: warning: 'return' with a value, in function returning void
+  return win;
+         ^~~
+../src/tictactoe.c:575:6: note: declared here
+ void checkForWin(int color)
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/tictactoe.o] Error 1
+13:20:05 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'GameRun':
+../src/tictactoe.c:237:5: warning: implicit declaration of function 'checkforWin'; did you mean 'checkForWin'? [-Wimplicit-function-declaration]
+     checkforWin();
+     ^~~~~~~~~~~
+     checkForWin
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:612:9: warning: 'return' with a value, in function returning void
+  return win;
+         ^~~
+../src/tictactoe.c:575:6: note: declared here
+ void checkForWin(int color)
+      ^~~~~~~~~~~
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/tictactoe.o: In function `GameRun':
+C:\Users\Thomas\Documents\GitHub\TicTacToe\Zybo-Z7-10-HDMI-2018.2-2\vivado_proj\zybo-z7-10-hdmi.sdk\Zybo-Z7-10-HDMI\Debug/../src/tictactoe.c:237: undefined reference to `checkforWin'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:46: Zybo-Z7-10-HDMI.elf] Error 1
+13:20:34 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'GameRun':
+../src/tictactoe.c:237:5: warning: implicit declaration of function 'checkforWin'; did you mean 'checkForWin'? [-Wimplicit-function-declaration]
+     checkforWin();
+     ^~~~~~~~~~~
+     checkForWin
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:612:9: warning: 'return' with a value, in function returning void
+  return win;
+         ^~~
+../src/tictactoe.c:575:6: note: declared here
+ void checkForWin(int color)
+      ^~~~~~~~~~~
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/tictactoe.o: In function `GameRun':
+C:\Users\Thomas\Documents\GitHub\TicTacToe\Zybo-Z7-10-HDMI-2018.2-2\vivado_proj\zybo-z7-10-hdmi.sdk\Zybo-Z7-10-HDMI\Debug/../src/tictactoe.c:237: undefined reference to `checkforWin'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:46: Zybo-Z7-10-HDMI.elf] Error 1
+13:20:42 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'GameRun':
+../src/tictactoe.c:236:5: warning: implicit declaration of function 'checkforWin'; did you mean 'checkForWin'? [-Wimplicit-function-declaration]
+     checkforWin();
+     ^~~~~~~~~~~
+     checkForWin
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:611:9: warning: 'return' with a value, in function returning void
+  return win;
+         ^~~
+../src/tictactoe.c:574:6: note: declared here
+ void checkForWin(int color)
+      ^~~~~~~~~~~
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/tictactoe.o: In function `GameRun':
+C:\Users\Thomas\Documents\GitHub\TicTacToe\Zybo-Z7-10-HDMI-2018.2-2\vivado_proj\zybo-z7-10-hdmi.sdk\Zybo-Z7-10-HDMI\Debug/../src/tictactoe.c:236: undefined reference to `checkforWin'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:46: Zybo-Z7-10-HDMI.elf] Error 1
+13:20:46 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'GameRun':
+../src/tictactoe.c:236:5: warning: implicit declaration of function 'checkforWin'; did you mean 'checkForWin'? [-Wimplicit-function-declaration]
+     checkforWin();
+     ^~~~~~~~~~~
+     checkForWin
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:611:9: warning: 'return' with a value, in function returning void
+  return win;
+         ^~~
+../src/tictactoe.c:574:6: note: declared here
+ void checkForWin(int color)
+      ^~~~~~~~~~~
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/tictactoe.o: In function `GameRun':
+C:\Users\Thomas\Documents\GitHub\TicTacToe\Zybo-Z7-10-HDMI-2018.2-2\vivado_proj\zybo-z7-10-hdmi.sdk\Zybo-Z7-10-HDMI\Debug/../src/tictactoe.c:236: undefined reference to `checkforWin'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:46: Zybo-Z7-10-HDMI.elf] Error 1
+13:21:24 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:610:9: warning: 'return' with a value, in function returning void
+  return win;
+         ^~~
+../src/tictactoe.c:573:6: note: declared here
+ void checkForWin(int color)
+      ^~~~~~~~~~~
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118868	   3536	6247072	6369476	 6130c4	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:21:42 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'GameRun':
+../src/tictactoe.c:236:5: error: too few arguments to function 'checkForWin'
+     checkForWin();
+     ^~~~~~~~~~~
+In file included from ../src/tictactoe.c:32:0:
+../src/tictactoe.h:68:6: note: declared here
+ void checkForWin(int color);
+      ^~~~~~~~~~~
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:611:9: warning: 'return' with a value, in function returning void
+  return win;
+         ^~~
+../src/tictactoe.c:574:6: note: declared here
+ void checkForWin(int color)
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/tictactoe.o] Error 1
+13:21:47 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:611:9: warning: 'return' with a value, in function returning void
+  return win;
+         ^~~
+../src/tictactoe.c:574:6: note: declared here
+ void checkForWin(int color)
+      ^~~~~~~~~~~
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118868	   3536	6247072	6369476	 6130c4	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:22:58 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:613:9: warning: 'return' with a value, in function returning void
+  return win;
+         ^~~
+../src/tictactoe.c:576:6: note: declared here
+ void checkForWin(int color)
+      ^~~~~~~~~~~
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118868	   3536	6247072	6369476	 6130c4	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:23:03 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:613:9: warning: 'return' with a value, in function returning void
+  return win;
+         ^~~
+../src/tictactoe.c:576:6: note: declared here
+ void checkForWin(int color)
+      ^~~~~~~~~~~
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118868	   3536	6247072	6369476	 6130c4	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:23:50 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:619:9: warning: 'return' with a value, in function returning void
+  return win;
+         ^~~
+../src/tictactoe.c:582:6: note: declared here
+ void checkForWin(int color)
+      ^~~~~~~~~~~
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118932	   3536	6247072	6369540	 613104	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:25:41 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:637:9: warning: 'return' with a value, in function returning void
+  return win;
+         ^~~
+../src/tictactoe.c:600:6: note: declared here
+ void checkForWin(int color)
+      ^~~~~~~~~~~
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119188	   3536	6247072	6369796	 613204	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:26:08 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:638:9: warning: 'return' with a value, in function returning void
+  return win;
+         ^~~
+../src/tictactoe.c:601:6: note: declared here
+ void checkForWin(int color)
+      ^~~~~~~~~~~
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119236	   3536	6247072	6369844	 613234	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:26:18 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:639:9: warning: 'return' with a value, in function returning void
+  return win;
+         ^~~
+../src/tictactoe.c:602:6: note: declared here
+ void checkForWin(int color)
+      ^~~~~~~~~~~
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119268	   3536	6247072	6369876	 613254	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:26:38 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:639:9: warning: 'return' with a value, in function returning void
+  return win;
+         ^~~
+../src/tictactoe.c:602:6: note: declared here
+ void checkForWin(int color)
+      ^~~~~~~~~~~
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119332	   3536	6247072	6369940	 613294	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:26:48 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:28:47 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+../src/tictactoe.c: In function 'checkForWin':
+../src/tictactoe.c:639:9: warning: 'return' with a value, in function returning void
+  return win;
+         ^~~
+../src/tictactoe.c:602:6: note: declared here
+ void checkForWin(int color)
+      ^~~~~~~~~~~
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119332	   3536	6247072	6369940	 613294	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:29:06 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119332	   3536	6247072	6369940	 613294	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:29:19 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:30:52 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119332	   3536	6247072	6369940	 613294	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:31:11 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:32:30 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119332	   3536	6247072	6369940	 613294	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:33:19 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119332	   3536	6247072	6369940	 613294	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:33:42 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119396	   3536	6247072	6370004	 6132d4	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:34:52 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119540	   3536	6247072	6370148	 613364	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:35:02 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119540	   3536	6247072	6370148	 613364	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:35:21 **** Auto Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tictactoe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tictactoe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tictactoe.d" -MT"src/tictactoe.o" -o "src/tictactoe.o" "../src/tictactoe.c"
+'Finished building: ../src/tictactoe.c'
+' '
+'Building target: Zybo-Z7-10-HDMI.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Zybo-Z7-10-HDMI_bsp/ps7_cortexa9_0/lib -o "Zybo-Z7-10-HDMI.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/tictactoe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Zybo-Z7-10-HDMI.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Zybo-Z7-10-HDMI.elf  |tee "Zybo-Z7-10-HDMI.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119668	   3536	6247072	6370276	 6133e4	Zybo-Z7-10-HDMI.elf
+'Finished building: Zybo-Z7-10-HDMI.elf.size'
+' '
+13:35:38 **** Incremental Build of configuration Debug for project Zybo-Z7-10-HDMI ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
