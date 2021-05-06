@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Thu Apr 15 11:54:12 2021
+//Date        : Mon May  3 20:47:26 2021
 //Host        : DESKTOP-RBNBVI9 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -31,12 +31,14 @@ module design_1_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    btns_4bits_tri_i,
     hdmi_out_clk_n,
     hdmi_out_clk_p,
     hdmi_out_data_n,
     hdmi_out_data_p,
     hdmi_out_ddc_scl_io,
-    hdmi_out_ddc_sda_io);
+    hdmi_out_ddc_sda_io,
+    sws_4bits_tri_i);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -58,12 +60,14 @@ module design_1_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
+  input [3:0]btns_4bits_tri_i;
   output hdmi_out_clk_n;
   output hdmi_out_clk_p;
   output [2:0]hdmi_out_data_n;
   output [2:0]hdmi_out_data_p;
   inout hdmi_out_ddc_scl_io;
   inout hdmi_out_ddc_sda_io;
+  input [3:0]sws_4bits_tri_i;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -86,6 +90,7 @@ module design_1_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire [3:0]btns_4bits_tri_i;
   wire hdmi_out_clk_n;
   wire hdmi_out_clk_p;
   wire [2:0]hdmi_out_data_n;
@@ -98,6 +103,7 @@ module design_1_wrapper
   wire hdmi_out_ddc_sda_io;
   wire hdmi_out_ddc_sda_o;
   wire hdmi_out_ddc_sda_t;
+  wire [3:0]sws_4bits_tri_i;
 
   design_1 design_1_i
        (.DDR_addr(DDR_addr),
@@ -121,6 +127,7 @@ module design_1_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
+        .btns_4bits_tri_i(btns_4bits_tri_i),
         .hdmi_out_clk_n(hdmi_out_clk_n),
         .hdmi_out_clk_p(hdmi_out_clk_p),
         .hdmi_out_data_n(hdmi_out_data_n),
@@ -130,7 +137,8 @@ module design_1_wrapper
         .hdmi_out_ddc_scl_t(hdmi_out_ddc_scl_t),
         .hdmi_out_ddc_sda_i(hdmi_out_ddc_sda_i),
         .hdmi_out_ddc_sda_o(hdmi_out_ddc_sda_o),
-        .hdmi_out_ddc_sda_t(hdmi_out_ddc_sda_t));
+        .hdmi_out_ddc_sda_t(hdmi_out_ddc_sda_t),
+        .sws_4bits_tri_i(sws_4bits_tri_i));
   IOBUF hdmi_out_ddc_scl_iobuf
        (.I(hdmi_out_ddc_scl_o),
         .IO(hdmi_out_ddc_scl_io),

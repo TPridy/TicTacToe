@@ -1,0 +1,8 @@
+12:27:28 **** Incremental Build of configuration Debug for project TicTacToe ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+
+12:27:28 Build Finished (took 250ms)
+

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="C:\Users\Thomas\Documents\GitHub\TicTacToe\Zybo-Z7-10-HDMI-2018.2-2\vivado_proj\zybo-z7-10-hdmi.sdk\TicTacToe\Debug" key="bootgen_files_selection"/>
 	<item value="C:\Users\Thomas\Documents\GitHub\TicTacToe\Zybo-Z7-10-HDMI-2018.2-2\vivado_proj\zybo-z7-10-hdmi.sdk\design_1_wrapper_hw_platform_3" key="program_fpga_view_bit_bmm_browse_key"/>
-	<item value="C:\Users\Thomas\Documents\GitHub\TicTacToe\Zybo-Z7-10-HDMI-2018.2-2\vivado_proj\zybo-z7-10-hdmi.sdk\design_1_wrapper_hw_platform_3" key="last_stored_selection"/>
+	<item value="C:\Users\Thomas\Documents\GitHub\TicTacToe\Zybo-Z7-10-HDMI-2018.2-2\vivado_proj\zybo-z7-10-hdmi.sdk\TicTacToe\Debug" key="last_stored_selection"/>
 </section>

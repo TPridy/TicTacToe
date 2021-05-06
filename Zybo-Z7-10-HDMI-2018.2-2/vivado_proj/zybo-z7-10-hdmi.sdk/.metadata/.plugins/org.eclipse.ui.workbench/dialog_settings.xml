@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="523" key="DIALOG_X_ORIGIN"/>
+		<item value="158" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
 		<item value="-1" key="dialogHeight"/>
 		<item value="-1" key="dialogWidth"/>
@@ -22,6 +26,8 @@
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
 		<item value="true" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\Thomas\Documents\GitHub\TicTacToe\Zybo-Z7-10-HDMI-2018.2-2\vivado_proj\zybo-z7-10-hdmi.sdk\Zybo-Z7-10-HDMI\src"/>
+			<item value="C:\Users\Thomas\Documents\GitHub\TicTacToe\Zybo-Z7-10-HDMI-2018.2-2\sdk_appsrc"/>
 			<item value="C:\Users\Thomas\Desktop\Zybo-Z7-10-HDMI-2018.2-2\sdk_appsrc"/>
 		</list>
 	</section>

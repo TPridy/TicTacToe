@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Tue Apr  6 10:49:49 2021
+// Date        : Mon May  3 20:48:17 2021
 // Host        : DESKTOP-RBNBVI9 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/Thomas/Documents/GitHub/TicTacToe/Zybo-Z7-10-HDMI-2018.2-2/vivado_proj/zybo-z7-10-hdmi.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/design_1_xlconcat_0_0_sim_netlist.v
@@ -18,24 +18,16 @@ module design_1_xlconcat_0_0
    (In0,
     In1,
     In2,
-    In3,
-    In4,
     dout);
   input [0:0]In0;
   input [0:0]In1;
   input [0:0]In2;
-  input [0:0]In3;
-  input [0:0]In4;
-  output [4:0]dout;
+  output [2:0]dout;
 
   wire [0:0]In0;
   wire [0:0]In1;
   wire [0:0]In2;
-  wire [0:0]In3;
-  wire [0:0]In4;
 
-  assign dout[4] = In4;
-  assign dout[3] = In3;
   assign dout[2] = In2;
   assign dout[1] = In1;
   assign dout[0] = In0;
