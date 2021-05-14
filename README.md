@@ -86,4 +86,5 @@ For technical support or questions, please post on the [Digilent Forum](forum.di
 
 Additional Notes
 ----------------
+Presentation on the project: https://www.canva.com/design/DAEbCweJBHI/vKSJBPOJ2pIntv0M1PaRiA/edit
 For more information on how this project is version controlled, refer to the [digilent-vivado-scripts repo](https://github.com/digilent/digilent-vivado-scripts).
